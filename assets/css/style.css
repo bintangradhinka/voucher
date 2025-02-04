@@ -1425,7 +1425,7 @@ ol ul {
 }
 
 .mt--100 {
-  margin-top: 100px !important;
+  margin-top: 0px !important;
 }
 
 .mb--100 {
@@ -8034,6 +8034,7 @@ a:hover {
 nav.pagination-wrapper {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 nav.pagination-wrapper .pagination {
   margin-top: 60px;
@@ -10496,6 +10497,32 @@ Copyright (c) 2015 Daniel Eden
   animation-name: rollIn;
 }
 
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-blue-500 {
+  color: #3b82f6;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-gray-700 {
+  color: #4b5563;
+}
+
+
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 @-webkit-keyframes rollOut {
   from {
@@ -11994,12 +12021,12 @@ body.sal-disabled [data-sal|="flip"] {
 }
 @media only screen and (max-width: 479px) {
   .haeder-default .header-inner {
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
-.haeder-default .header-left {
+.haeder-default .header-left { 
   display: flex;
   align-items: center;
   justify-content: start;
@@ -12017,7 +12044,7 @@ body.sal-disabled [data-sal|="flip"] {
 }
 @media only screen and (max-width: 767px) {
   .haeder-default .header-left {
-    flex-basis: 35%;
+    flex-basis: 3%;
   }
 }
 @media only screen and (max-width: 479px) {
@@ -12052,7 +12079,6 @@ body.sal-disabled [data-sal|="flip"] {
   .haeder-default .header-right {
     justify-content: center;
     flex-basis: 100%;
-    margin-top: 10px;
   }
 }
 .haeder-default .header-right .setting-option {
@@ -12079,7 +12105,7 @@ body.sal-disabled [data-sal|="flip"] {
 }
 @media only screen and (max-width: 479px) {
   .haeder-default .header-right .setting-option .icon-box a#connectbtn {
-    padding: 8px 11px;
+    padding: 10px 11px;
     font-size: 12px;
     border-radius: 6px;
   }
@@ -13176,6 +13202,10 @@ span.rn-badge-card::before {
   filter: brightness(1);
 }
 
+.md\:flex {
+  display: flex;
+}
+
 /*---------------------------
     Notification Area  
 -----------------------------*/
@@ -13414,8 +13444,8 @@ span.rn-badge-card::before {
 }
 @media only screen and (max-width: 479px) {
   .rn-header .logo-thumbnail {
-    padding-right: 0;
-    margin-right: 0;
+    padding-right: 20px;
+    margin-right: 50px;
   }
 }
 .rn-header .logo-thumbnail::after {
@@ -14030,7 +14060,7 @@ button.btn {
 }
 a.btn.btn-primary,
 button.btn.btn-primary {
-  background: var(--color-primary);
+  background: var(--color-facebook);
 }
 a.btn.btn-primary:hover,
 button.btn.btn-primary:hover {
@@ -14061,16 +14091,19 @@ a.btn.btn-small,
 button.btn.btn-small {
   padding: 10px 15px;
 }
+
 a.btn.btn-large,
 button.btn.btn-large {
-  padding: 15px 34px;
+  padding: 10px 20px;
   min-width: 160px;
   transition: 0.3s;
+ 
 }
 @media only screen and (max-width: 767px) {
   a.btn.btn-large,
   button.btn.btn-large {
     min-width: max-content;
+
   }
 }
 
@@ -14955,14 +14988,13 @@ figcaption {
     Banner Style 2 
 ---------------------------*/
 .slider-style-2 .single-slide {
-  padding: 0 15px;
+  padding:0px;
   position: relative;
   margin-bottom: 0;
 }
 .slider-style-2 .single-slide .inner {
   position: relative;
-  padding: 15px;
-
+  padding: 0px;
   border-radius: 7px;
 }
 .slider-style-2 .single-slide .thumbnail {
@@ -16637,7 +16669,7 @@ figcaption {
   transition: var(--transition);
 }
 .single-odometer.banner {
-  padding: 50px 50px 0px 50px;
+  padding: 30px 30px 0px 50px;
   background: var(--background-color-1);
   height: 100%;
   border: 1px solid var(--color-border);
@@ -18869,22 +18901,12 @@ button .small-image {
   display: none;
 }
 
-.product-tab-nav .nav {
-  background: var(--background-color-1);
-  padding: 10px;
-  border-radius: 15px 15px;
-  border-right: 1px solid var(--color-border);
-  border-left: 1px solid var(--color-border);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-}
 .product-tab-nav .nav button {
   width: auto;
 }
 .product-tab-nav .nav button.nav-link {
   padding: 13px 30px;
   margin-right: 20px;
-  border-radius: 5px;
   color: var(--color-white);
   border: 1px dashed var(--color-border);
   transition: var(--transition);
@@ -18900,7 +18922,7 @@ button .small-image {
 }
 .product-tab-nav .nav button.nav-link.active {
   background: var(--color-primary-alta);
-  border: 1px dashed transparent;
+  border: 1px;
 }
 .product-tab-nav .nav button.nav-link:hover {
   border: 1px dashed var(--color-white);
@@ -24429,7 +24451,6 @@ body.active-light-mode {
 .active-light-mode .tab-button-one .nav-tabs,
 .active-light-mode nav.pagination-wrapper .pagination,
 .active-light-mode .product-tab-nav .nav {
-  background: var(--color-white);
 }
 
 .active-light-mode .nice-select::after {
