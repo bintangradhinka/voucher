@@ -128,42 +128,74 @@
     </header>
     <div class="w-full mx-auto max-w-[85rem]"></div>
     <!-- Main content with product details -->
-    <div class="containers">
-      <div class="row">
-        <!-- Product Image -->
-        <div class="col-md-2">
-          <div class="product-style-one no-overlay with-placeBid text-center">
-            <div class="card-thumbnail">
-              <img src="https://boboku.store/images/products/IGmOJyzQx4.png" alt="Canva Pro" />
-            </div>
+    <div class="con">
+      <div class="main-content">
+          <div class="product-info">
+              <div class="left">
+                  <img src="https://boboku.store/images/products/UhOuma9oHC.png"/>
+                  <div class="details">
+                      <h1>Zoom One Pro</h1>
+                      <p>Zoom One Pro dengan kapasitas hingga 100 peserta, siap untuk digunakan dan dikirimkan kepada Anda. Akun ini berlaku untuk durasi 1 bulan penuh.</p>
+                      <a href="#">Lihat selengkapnya</a>
+                  </div>
+              </div>
+              <div class="actions">
+                  <button>Komunikasi</button>
+              </div>
           </div>
-        </div>
-
-
-        <div class="col-md-4">
-          <h3>Canva Pro</h3>
-          <p>Canva adalah alat desain grafis yang memudahkan pembuatan berbagai visual.</p>
-          
-          <div class="product-price">
-            <span class="old-price">Rp 50.000</span>
+          <div class="alert">
+              Kamu belum login, jumlah pembelian akan dibatasi. Silahkan
+              <a href="#">Login</a>
+              terlebih dahulu.
           </div>
-
-          <div class="availability">
-            <span class="status available">Tersedia</span>
+          <div class="search">
+              <input type="text" placeholder="Cari varian produk"/>
           </div>
-
-
-          <div class="action-buttons mt-3">
-            <a href="tambah.html" >  <button class="btn btn-primary">Tambah ke Keranjang</button> </a>
-            <a href="beli.html"><button class="btn btn-danger"> Beli Sekarang</button> </a>
+          <div class="products">
+              <div class="product" onclick="showBuyOptions('Zoom Pro 14 Hari Perpanjang', 'Rp. 6.000')">
+                  <div class="discount">70%</div>
+                  <h2>Zoom Pro 14 Hari Perpanjang</h2>
+                  <div class="status available">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Tersedia</span>
+                  </div>
+                  <div class="price">
+                      <span class="old-price">Rp. 20.000</span>
+                      <span class="new-price">Rp. 6.000</span>
+                  </div>
+              </div>
+              <div class="product" onclick="showBuyOptions('Zoom Pro 14 Hari', 'Rp. 5.800')">
+                  <div class="discount">76%</div>
+                  <h2>Zoom Pro 14 Hari</h2>
+                  <div class="status unavailable">
+                      <i class="fas fa-times-circle"></i>
+                      <span>Stok habis</span>
+                  </div>
+                  <div class="price">
+                      <span class="old-price">Rp. 24.000</span>
+                      <span class="new-price">Rp. 5.800</span>
+                  </div>
+              </div>
+              <div class="product">
+                  <h2>Zoom 1 Bulan</h2>
+                  <div class="status unavailable">
+                      <i class="fas fa-times-circle"></i>
+                      <span>Stok habis</span>
+                  </div>
+                  <div class="price">
+                      <span class="new-price">Rp. 15.000</span>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
-    </div>
+      <div class="sidebar" id="sidebar">
+          <div class="illustration">
+              <img alt="Illustration of people using Zoom" src="https://storage.googleapis.com/a1aa/image/8eW0QQWhQGuWP7hD-l0yaSbUZuzY3cJ3F2erialwX-o.jpg"/>
+              <p>Yeay produk tersedia~ pilih variant produk dulu yuk!</p>
+          </div>
+      </div>
   </div>
-</div>
-</div>
-<div class="rn-callto-action rn-section-gapTop">
+                  <div class="rn-callto-action rn-section-gapTop">
 <div class="container-fluid about-fluidimg-cta">
   <div class="row">
     <div class="col-lg-12 ">
@@ -235,12 +267,12 @@
            <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
           </ul>
 
-        <!-- </section> -->
+     
         </div>
       </div>
       <div class="container">
         <div class="row">
-        <!-- <section class="customer-logos slider"> -->
+       
           <ul class="nu-brand-area customer-logos slider">
            <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
            <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
@@ -252,7 +284,7 @@
            <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
           </ul>
 
-        <!-- </section> -->
+    
         </div>
       </div>
   </div>
@@ -349,6 +381,20 @@
   <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
 </svg>
 </div>
+<script>
+  function showBuyOptions(productName, productPrice) {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.innerHTML = `
+          <div class="bg-white p-4 rounded-lg shadow-md h-full">
+              <h2 class="text-lg font-semibold mb-4">${productName}</h2>
+              <p class="text-gray-600 mb-4">Harga: <span class="text-blue-500 font-semibold">${productPrice}</span></p>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-lg w-full">Beli Sekarang</button>
+          </div>
+      `;
+  }
+</script>
+</body>
+</html>
 
 
 <script src="assets/js/owl.carousel.min.js"></script>
@@ -403,6 +449,7 @@ responsive: [{
 }]
 });
 });
+
 
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
