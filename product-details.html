@@ -17,6 +17,7 @@
     <!-- CSS 
     ============================================ -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/vendor/slick.css" />
     <link rel="stylesheet" href="assets/css/vendor/slick-theme.css" />
     <link rel="stylesheet" href="assets/css/vendor/nice-select.css" />
@@ -132,15 +133,15 @@
       <div class="main-content">
           <div class="product-info">
               <div class="left">
+              <div class="icon">
+                <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path fill="currentColor" fill-rule="evenodd" d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z"/></svg></a>
+              </div>
                   <img src="https://boboku.store/images/products/UhOuma9oHC.png"/>
                   <div class="details">
                       <h1>Zoom One Pro</h1>
                       <p>Zoom One Pro dengan kapasitas hingga 100 peserta, siap untuk digunakan dan dikirimkan kepada Anda. Akun ini berlaku untuk durasi 1 bulan penuh.</p>
-                      <a href="#">Lihat selengkapnya</a>
                   </div>
-              </div>
-              <div class="actions">
-                  <button>Komunikasi</button>
               </div>
           </div>
           <div class="alert">
@@ -164,7 +165,7 @@
                       <span class="new-price">Rp. 6.000</span>
                   </div>
               </div>
-              <div class="product" onclick="showBuyOptions('Zoom Pro 14 Hari', 'Rp. 5.800')">
+              <div class="product">
                   <div class="discount">76%</div>
                   <h2>Zoom Pro 14 Hari</h2>
                   <div class="status unavailable">
@@ -190,7 +191,7 @@
       </div>
       <div class="sidebar" id="sidebar">
           <div class="illustration">
-              <img alt="Illustration of people using Zoom" src="https://storage.googleapis.com/a1aa/image/8eW0QQWhQGuWP7hD-l0yaSbUZuzY3cJ3F2erialwX-o.jpg"/>
+              <img alt="Illustration of people using Zoom" src="https://boboku.store/images/wakku/13.%20Using%20smartphone.svg"/>
               <p>Yeay produk tersedia~ pilih variant produk dulu yuk!</p>
           </div>
       </div>
@@ -386,9 +387,11 @@
       const sidebar = document.getElementById('sidebar');
       sidebar.innerHTML = `
           <div class="bg-white p-4 rounded-lg shadow-md h-full">
-              <h2 class="text-lg font-semibold mb-4">${productName}</h2>
+              <h5 class="text-lg font-semibold mb-4">${productName}</h5>
               <p class="text-gray-600 mb-4">Harga: <span class="text-blue-500 font-semibold">${productPrice}</span></p>
-              <button class="bg-blue-500 text-white px-4 py-2 rounded-lg w-full">Beli Sekarang</button>
+              <label for="email">Tulis Email (Wajib)</label>
+              <input type="email" id="email" placeholder="email@gmail.com" class="w-full p-2 border rounded mb-3" />
+              <button onclick="window.location.href='beli.html'" class="buy-now-button">Beli Sekarang</button>
           </div>
       `;
   }
@@ -452,6 +455,7 @@ responsive: [{
 
 
 </script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 </body>
 </html>
