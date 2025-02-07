@@ -128,13 +128,9 @@
           </div>
     </header>
     <main>
-    <div class="w-full mx-auto max-w-[85rem]"></div>
     <!-- Main content with product details -->
 
-    <div class="info-box">
-      <p>Informasi</p>
-      <p>Cek kembali produk yang akan dibeli dan langsung checkout. Jangan lupa isi kontak untuk pengiriman!</p>
-    </div>
+      <div class="col-12">
     <div class="card">
       <h2>Periksa Keranjang</h2>
       <div class="cart-item">
@@ -149,6 +145,7 @@
         <div class="delete">
               <i class="fas fa-trash-alt"></i>
           </div>
+      
       </div>
       <div class="alert">
           <p>Produk ini akan diproses secara manual</p>
@@ -168,62 +165,93 @@
           <input type="text" placeholder="Masukkan kode voucher...">
           <button>Gunakan</button>
       </div>
+    </div>
   </div>
   <div class="card">
-      <h2>Pilih Pembayaran</h2>
-      <div class="mb-4">
-    </div>
-      <div class="payment-methods">
-          <h3>CONVENIENCE STORE</h3>
-          <div class="icons">
-              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Alfamart logo">
-              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Indomaret logo">
-              
+    <h2>Pilih Pembayaran</h2>
+    <div class="mb-4"></div>
+    <div class="payment-methods">
+    
+      <div class="mb-3">
+        <button class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+            <h3>CONVENIENCE STORE</h3>
+            <div class="d-flex gap-2">
+            <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px; margin-right: 10px;">
+            <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px;">
+            </div>
+        <div class="collapse mt-3" id="collapse1">
+          <div class="card card-body">
+            <div class="icons">
+              <div class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px;">
+              </div>
+              <div class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px;">
+              </div>
+            </div>
           </div>
-          <h3>E-WALLET</h3>
-          <div class="grid">
-              <div class="method">
-                  <div class="flex">
-                      <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="OVO logo">
-                      <p class="font-semibold">OVO</p>
-                  </div>
-                  <p>Rp. 6.180</p>
-              </div>
-              <div class="method">
-                  <div class="flex">
-                      <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="QRIS by ShopeePay logo">
-                      <p class="font-semibold">QRIS by ShopeePay</p>
-                  </div>
-                  <p>Rp. 6.792</p>
-              </div>
-              <div class="method">
-                  <div class="flex">
-                      <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="DANA logo">
-                      <p class="font-semibold">DANA</p>
-                  </div>
-                  <p>Rp. 6.180</p>
-              </div>
-              <div class="method">
-                  <div class="flex">
-                      <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="ShopeePay logo">
-                      <p class="font-semibold">ShopeePay</p>
-                  </div>
-                  <p>Rp. 6.180</p>
-              </div>
-          </div>
-          <h3>VIRTUAL ACCOUNT</h3>
-          <div class="icons">
-              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="BNI logo">
-              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="BRI logo">
-              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Mandiri logo">
-              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="BCA logo">
-              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="CIMB logo">
-              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="BSI logo">
-              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Permata logo">
-              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Maybank logo">
-          </div>
+        </div>
       </div>
+    </button>
+    
+  
+ 
+      <div class="mb-3">
+        <button class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            <h3>E-WALLET</h3>
+            <div class="d-flex gap-2">
+            <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px; margin-right: 10px;">
+            <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px;">
+          </div>
+        <div class="collapse mt-3" id="collapse2">
+          <div class="card card-body">
+            <div class="icons">
+              <div class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px; margin-right: 10px;">
+            </div>
+            <div class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px;">
+            </div>
+            <div class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+              <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px;">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </button>
+
+      <div class="mb-3">
+        <button class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            <h3>VIRTUAL ACCOUNT</h3>
+            <div class="d-flex gap-2">
+            <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px; margin-right: 10px;">
+            <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px; margin-right: 10px;">
+            <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px; margin-right: 10px;">
+            <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px; margin-right: 10px;">
+            </div>
+        <div class="collapse mt-3" id="collapse3">
+          <div class="card card-body">
+            <div class="icons">
+              <div class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px;">
+              </div>
+              <div class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px;">
+              </div>
+              <div class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px;">
+              </div>
+              <div class="btn w-100 text-start" style="background-color: white; color: black; border: 1px solid #ddd;" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                <img src="https://cdn-gop.garenanow.com/gop/static/channel/0000/208/266/icon.png" alt="Shopee" style="width: 50px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</button>
   <div class="card">
       <h2>Informasi Kontak</h2>
       <div class="contact-info">

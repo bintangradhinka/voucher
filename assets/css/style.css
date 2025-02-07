@@ -12771,7 +12771,6 @@ span.rn-badge-card::before {
   align-items: center;
   background-color: #fff;
   padding: 20px;
-  margin-top: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -12859,9 +12858,9 @@ span.rn-badge-card::before {
 .product {
   background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 100px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 32%;
+  width: 100%;
   cursor: pointer;
 }
 .product .discount {
@@ -12919,6 +12918,13 @@ span.rn-badge-card::before {
   color: #1d4ed8;
   margin-bottom: 10px;
 }
+
+.product-description {
+  margin-top: 1rem;
+}
+
+
+
 
 /*------------------------------
     JS
@@ -13124,7 +13130,6 @@ main {
 .icon:hover {
   color: rgb(110, 110, 110);
 }
-
 
 
 /*------------------------------

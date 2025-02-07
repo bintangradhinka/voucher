@@ -129,73 +129,97 @@
     </header>
     <div class="w-full mx-auto max-w-[85rem]"></div>
     <!-- Main content with product details -->
-    <div class="con">
-      <div class="main-content">
-          <div class="product-info">
-              <div class="left">
-              <div class="icon">
-                <a href="index.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path fill="currentColor" fill-rule="evenodd" d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z"/></svg></a>
+    <div class="container mt-5">
+      <div class="row">
+          <div class="col-lg-8">
+              <div class="product-info d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <div class="icon">
+                      <button class="btn btn-link text-primary p-0 mr-3">
+                        <a href="index.html">
+                          <i class="fas fa-arrow-left"></i>
+                        </a>
+                      </button>
+                    </div>
+                     <div class="d-flex align-items-center justify-content-between w-100">
+                     </div>
+                  </div>
+
+                  <div class="d-flex align-items-center p-3">
+                    <img alt="Zoom logo" src="https://boboku.store/images/products/UhOuma9oHC.png"/>
+                    <div class="details">
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <h1 class="m-0" style="font-size: 24px;">Zoom One Pro</h1>
+                            <button class="btn btn-primary" style="height: fit-content;">Komunikasi</button>
+                        </div>
+                        <p class="mt-2" style="font-size: 16px;">Zoom One Pro dengan kapasitas hingga 100 peserta, siap untuk digunakan dan dikirimkan kepada Anda. Akun ini berlaku untuk durasi 1 bulan penuh.</p>
+                    </div>
+                </div>
+                
+                  <div class="actions d-flex align-items-center">
+                  </div>
               </div>
-                  <img src="https://boboku.store/images/products/UhOuma9oHC.png"/>
-                  <div class="details">
-                      <h1>Zoom One Pro</h1>
-                      <p>Zoom One Pro dengan kapasitas hingga 100 peserta, siap untuk digunakan dan dikirimkan kepada Anda. Akun ini berlaku untuk durasi 1 bulan penuh.</p>
+              <div class="alert alert-warning mt-4">
+                  Kamu belum login, jumlah pembelian akan dibatasi. Silahkan
+                  <a href="#">Login</a>
+                  terlebih dahulu.
+              </div>
+              <div class="search mt-4">
+                  <input class="form-control" type="text" placeholder="Cari varian produk"/>
+              </div>
+              <div class="row mt-4">
+                  <div class="col-md-4">
+                      <div class="product p-3 bg-white rounded shadow-sm" onclick="showBuyOptions('Zoom Pro 14 Hari Perpanjang', 'Rp. 6.000')">
+                          <div class="discount">70%</div>
+                          <h2>Zoom Pro 14 Hari Perpanjang</h2>
+                          <div class="status available d-flex align-items-center">
+                              <i class="fas fa-check-circle"></i>
+                              <span>Tersedia</span>
+                          </div>
+                          <div class="price d-flex align-items-center">
+                              <span class="old-price">Rp. 20.000</span>
+                              <span class="new-price">Rp. 6.000</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="product p-3 bg-white rounded shadow-sm" onclick="('Zoom Pro 14 Hari', 'Rp. 5.800')">
+                          <div class="discount">76%</div>
+                          <h2>Zoom Pro 14 Hari</h2>
+                          <div class="status unavailable d-flex align-items-center">
+                              <i class="fas fa-times-circle"></i>
+                              <span>Stok habis</span>
+                          </div>
+                          <div class="price d-flex align-items-center">
+                              <span class="old-price">Rp. 24.000</span>
+                              <span class="new-price">Rp. 5.800</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="product p-3 bg-white rounded shadow-sm">
+                        <div class="discount">0%</div>
+                          <h2>Zoom 1 Bulan</h2>
+                          <div class="status unavailable d-flex align-items-center">
+                              <i class="fas fa-times-circle"></i>
+                              <span>Stok habis</span>
+                          </div>
+                          <div class="price d-flex align-items-center">
+                              <span class="new-price">Rp. 15.000</span>
+                          </div>
+                      </div>
                   </div>
               </div>
           </div>
-          <div class="alert">
-              Kamu belum login, jumlah pembelian akan dibatasi. Silahkan
-              <a href="#">Login</a>
-              terlebih dahulu.
-          </div>
-          <div class="search">
-              <input type="text" placeholder="Cari varian produk"/>
-          </div>
-          <div class="products">
-              <div class="product" onclick="showBuyOptions('Zoom Pro 14 Hari Perpanjang', 'Rp. 6.000')">
-                  <div class="discount">70%</div>
-                  <h2>Zoom Pro 14 Hari Perpanjang</h2>
-                  <div class="status available">
-                      <i class="fas fa-check-circle"></i>
-                      <span>Tersedia</span>
-                  </div>
-                  <div class="price">
-                      <span class="old-price">Rp. 20.000</span>
-                      <span class="new-price">Rp. 6.000</span>
-                  </div>
+          <div class="col-lg-4" id="sidebar">
+              <div class="illustration">
+                  <img alt="Illustration of people using Zoom" src="https://boboku.store/images/wakku/13.%20Using%20smartphone.svg"/>
+                  <p>Yeay produk tersedia~ pilih variant produk dulu yuk!</p>
               </div>
-              <div class="product">
-                  <div class="discount">76%</div>
-                  <h2>Zoom Pro 14 Hari</h2>
-                  <div class="status unavailable">
-                      <i class="fas fa-times-circle"></i>
-                      <span>Stok habis</span>
-                  </div>
-                  <div class="price">
-                      <span class="old-price">Rp. 24.000</span>
-                      <span class="new-price">Rp. 5.800</span>
-                  </div>
-              </div>
-              <div class="product">
-                  <h2>Zoom 1 Bulan</h2>
-                  <div class="status unavailable">
-                      <i class="fas fa-times-circle"></i>
-                      <span>Stok habis</span>
-                  </div>
-                  <div class="price">
-                      <span class="new-price">Rp. 15.000</span>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="sidebar" id="sidebar">
-          <div class="illustration">
-              <img alt="Illustration of people using Zoom" src="https://boboku.store/images/wakku/13.%20Using%20smartphone.svg"/>
-              <p>Yeay produk tersedia~ pilih variant produk dulu yuk!</p>
           </div>
       </div>
   </div>
+
                   <div class="rn-callto-action rn-section-gapTop">
 <div class="container-fluid about-fluidimg-cta">
   <div class="row">
@@ -382,6 +406,8 @@
   <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
 </svg>
 </div>
+
+<!-- JS -->
 <script>
   function showBuyOptions(productName, productPrice) {
       const sidebar = document.getElementById('sidebar');

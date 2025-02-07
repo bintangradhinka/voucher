@@ -1,323 +1,103 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #6b46c1;
-        }
-        header .search-bar {
-            position: relative;
-            width: 50%;
-        }
-        header .search-bar input {
-            width: 100%;
-            padding: 10px 20px 10px 40px;
-            border: 1px solid #e2e8f0;
-            border-radius: 9999px;
-        }
-        header .search-bar i {
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #a0aec0;
-        }
-        header .actions {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        header .actions i {
-            color: #4a5568;
-        }
-        header .actions button {
-            background-color: #3182ce;
-            color: #ffffff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 9999px;
-            cursor: pointer;
-        }
-        main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        .info-box {
-            background-color: #ebf8ff;
-            color: #3182ce;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .card {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .card h2 {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .cart-item img {
-            width: 64px;
-            height: 64px;
-            border-radius: 8px;
-        }
-        .cart-item .details {
-            flex-grow: 1;
-            margin-left: 20px;
-        }
-        .cart-item .details h3 {
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .cart-item .details p {
-            color: #718096;
-        }
-        .cart-item .delete {
-            color: #718096;
-            cursor: pointer;
-        }
-        .alert {
-            background-color: #fefcbf;
-            color: #d69e2e;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .summary {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .summary p {
-            font-size: 16px;
-        }
-        .summary .total {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .voucher {
-            display: flex;
-            gap: 20px;
-        }
-        .voucher input {
-            flex-grow: 1;
-            padding: 10px;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-        }
-        .voucher button {
-            background-color: #2d3748;
-            color: #ffffff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .payment-methods h3 {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .payment-methods .icons {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        .payment-methods .icons img {
-            width: 50px;
-            height: 50px;
-        }
-        .payment-methods .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        .payment-methods .grid .method {
-            border: 1px solid #e2e8f0;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .payment-methods .grid .method img {
-            width: 32px;
-            height: 32px;
-        }
-        .payment-methods .grid .method p {
-            color: #718096;
-        }
-        .contact-info input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-        }
-        .contact-info p {
-            color: #718096;
-            margin-top: 10px;
-        }
-        .order-button {
-            text-align: center;
-        }
-        .order-button button {
-            background-color: #2d3748;
-            color: #ffffff;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Alert Example</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .product {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f8f9fa;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">boboku.store</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Cari produk & transaksi">
-            <i class="fas fa-search"></i>
+  <div class="container mt-4">
+    <div id="alert-container"></div>
+
+    <div class="products">
+      <div class="product" onclick="showBuyOptions('Zoom Pro 14 Hari Perpanjang', 'Rp. 6.000')">
+        <div class="discount">70%</div>
+        <h2>Zoom Pro 14 Hari Perpanjang</h2>
+        <div class="status available">
+          <i class="fas fa-check-circle"></i>
+          <span>Tersedia</span>
         </div>
-        <div class="actions">
-            <i class="fas fa-shopping-cart"></i>
-            <button>Masuk</button>
+        <div class="price">
+          <span class="old-price">Rp. 20.000</span>
+          <span class="new-price">Rp. 6.000</span>
         </div>
-    </header>
-    <main>
-        <div class="info-box">
-            <p>Informasi</p>
-            <p>Cek kembali produk yang akan dibeli dan langsung checkout. Jangan lupa isi kontak untuk pengiriman!</p>
+      </div>
+
+      <div class="product" onclick="showAlert('Zoom Pro 14 Hari')">
+        <div class="discount">76%</div>
+        <h2>Zoom Pro 14 Hari</h2>
+        <div class="status unavailable">
+          <i class="fas fa-times-circle"></i>
+          <span>Stok habis</span>
         </div>
-        <div class="card">
-            <h2>Periksa Keranjang</h2>
-            <div class="cart-item">
-                <div class="flex">
-                    <img src="https://placehold.co/100x100" alt="Product image">
-                    <div class="details">
-                        <h3>Zoom One Pro - Zoom Pro 14 Hari Perpanjangan</h3>
-                        <p>Rp. 6.000 x 1 = Rp. 6.000</p>
-                        <p>Daftar dan masuk dengan akun untuk mengubah jumlah dan menggunakan pembayaran saldo</p>
-                    </div>
-                </div>
-                <div class="delete">
-                    <i class="fas fa-trash-alt"></i>
-                </div>
-            </div>
-            <div class="alert">
-                <p>Produk ini akan diproses secara manual</p>
-            </div>
-            <div class="summary">
-                <p>Total Item</p>
-                <p>1</p>
-            </div>
-            <div class="summary">
-                <p>Subtotal</p>
-                <p class="total">Rp. 6.000</p>
-            </div>
+        <div class="price">
+          <span class="old-price">Rp. 24.000</span>
+          <span class="new-price">Rp. 5.800</span>
         </div>
-        <div class="card">
-            <h2>Gunakan Voucher</h2>
-            <div class="voucher">
-                <input type="text" placeholder="Masukkan kode voucher...">
-                <button>Gunakan</button>
-            </div>
+      </div>
+
+      <div class="product" onclick="showAlert('Zoom 1 Bulan')">
+        <h2>Zoom 1 Bulan</h2>
+        <div class="status unavailable">
+          <i class="fas fa-times-circle"></i>
+          <span>Stok habis</span>
         </div>
-        <div class="card">
-            <h2>Pilih Pembayaran</h2>
-            <div class="payment-methods">
-                <h3>CONVENIENCE STORE</h3>
-                <div class="icons">
-                    <img src="https://placehold.co/50x50" alt="Alfamart logo">
-                    <img src="https://placehold.co/50x50" alt="Indomaret logo">
-                </div>
-                <h3>E-WALLET</h3>
-                <div class="grid">
-                    <div class="method">
-                        <div class="flex">
-                            <img src="https://placehold.co/50x50" alt="OVO logo">
-                            <p class="font-semibold">OVO</p>
-                        </div>
-                        <p>Rp. 6.180</p>
-                    </div>
-                    <div class="method">
-                        <div class="flex">
-                            <img src="https://placehold.co/50x50" alt="QRIS by ShopeePay logo">
-                            <p class="font-semibold">QRIS by ShopeePay</p>
-                        </div>
-                        <p>Rp. 6.792</p>
-                    </div>
-                    <div class="method">
-                        <div class="flex">
-                            <img src="https://placehold.co/50x50" alt="DANA logo">
-                            <p class="font-semibold">DANA</p>
-                        </div>
-                        <p>Rp. 6.180</p>
-                    </div>
-                    <div class="method">
-                        <div class="flex">
-                            <img src="https://placehold.co/50x50" alt="ShopeePay logo">
-                            <p class="font-semibold">ShopeePay</p>
-                        </div>
-                        <p>Rp. 6.180</p>
-                    </div>
-                </div>
-                <h3>VIRTUAL ACCOUNT</h3>
-                <div class="icons">
-                    <img src="https://placehold.co/50x50" alt="BNI logo">
-                    <img src="https://placehold.co/50x50" alt="BRI logo">
-                    <img src="https://placehold.co/50x50" alt="Mandiri logo">
-                    <img src="https://placehold.co/50x50" alt="BCA logo">
-                    <img src="https://placehold.co/50x50" alt="CIMB logo">
-                    <img src="https://placehold.co/50x50" alt="BSI logo">
-                    <img src="https://placehold.co/50x50" alt="Permata logo">
-                    <img src="https://placehold.co/50x50" alt="Maybank logo">
-                </div>
-            </div>
+        <div class="price">
+          <span class="new-price">Rp. 15.000</span>
         </div>
-        <div class="card">
-            <h2>Informasi Kontak</h2>
-            <div class="contact-info">
-                <input type="text" placeholder="+62 Nomor Whatsapp">
-                <p>Diperlukan untuk mengirim informasi pesanan.</p>
-            </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fungsi untuk menampilkan alert
+    function showAlert(productName) {
+      const alertContainer = document.getElementById("alert-container");
+
+      // Clear existing alerts
+      alertContainer.innerHTML = `
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+            <use href="#exclamation-triangle-fill"></use>
+          </svg>
+          <div>
+            Stok untuk <strong>${productName}</strong> habis. Silakan cek kembali nanti.
+          </div>
         </div>
-        <div class="order-button">
-            <button>
-                <i class="fas fa-shopping-cart"></i>
-                Order Sekarang
-            </button>
-        </div>
-    </main>
+      `;
+
+      // Hapus alert otomatis setelah 3 detik
+      setTimeout(() => {
+        alertContainer.innerHTML = "";
+      }, 3000);
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
