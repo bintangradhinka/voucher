@@ -6300,7 +6300,6 @@ img {
   vertical-align: middle;
   max-width: 100%;
   height: auto;
-  margin-right: 20px;
 }
 
 svg:not(:root) {
@@ -12798,13 +12797,13 @@ span.rn-badge-card::before {
 }
 
 .consuk {
-  background-color: #ffffff53;
+  background-color: var(--background-color-1);
   border-radius: 20px;
   padding: 30px;
   max-width: 700px;
   margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  outline: 1px solid #000000;
+  outline: 0.1px solid #ffffff3a;
 }
 
 .rounded-full {
@@ -12815,8 +12814,16 @@ span.rn-badge-card::before {
 .bold-text {
   font-weight: bold;
 }
-
-
+/*------------------------------
+  JsDetail
+--------------------------------*/
+.jsdetail {
+  outline: 0.1px solid #ffffff3a; 
+  border-radius: 8px; 
+  background-color: var(--background-color-1); 
+  padding: 20px;
+  margin-top: 10px;
+}
 /*------------------------------
    Product
 --------------------------------*/
@@ -12835,13 +12842,15 @@ span.rn-badge-card::before {
   margin-left: 3%;
 }
 .product-info {
-  display: flex;
+
   justify-content: space-between;
   align-items: center;
-  background-color: #0b1322;
-  padding: 20px;
+  background-color:var(--background-color-1);
+  outline: 0.1px solid #ffffff3a;
+  padding: 0.1px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
 .product-info .left {
   display: flex;
@@ -12871,6 +12880,7 @@ span.rn-badge-card::before {
   text-decoration: none;
 }
 
+
 .actions {
   display: flex;
   align-items: center;
@@ -12898,6 +12908,23 @@ span.rn-badge-card::before {
   color: #6b7280;
   cursor: pointer;
 }
+.alertu {
+  background-color: #99d6ffa6;
+  color: #000000f4;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #007bff;
+}
+.alertx {
+  background-color: #9dfa9f86;
+  color: #000000f4;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #0d7000;
+}
+
 .alert {
   background-color: #fef3c7;
   color: #b45309;
@@ -12914,9 +12941,9 @@ span.rn-badge-card::before {
 }
 .search input {
   width: 100%;
-  background-color: #0b1322;
+  background-color: var(--background-color-1);
   padding: 15px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #ffffff3a;
   border-radius: 8px;
 }
 .products {
@@ -12925,12 +12952,14 @@ span.rn-badge-card::before {
   margin-top: 20px;
 }
 .product {
-  background-color: #fff;
+  background-color: var(--background-color-1);
   padding: 20px;
   border-radius: 100px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
+  outline: 0.1px solid #ffffff3a;
   cursor: pointer;
+  
 }
 .product .discount {
   background-color: #ef4444;
@@ -12939,6 +12968,10 @@ span.rn-badge-card::before {
   border-radius: 8px;
   font-size: 14px;
   display: inline-block;
+}
+
+.product:hover {
+  background-color: rgba(0, 0, 255, 0.2);
 }
 .product h2 {
   font-size: 18px;
@@ -12972,6 +13005,7 @@ span.rn-badge-card::before {
 .illustration {
   background-color: #e0f2fe;
   padding: 40px;
+  margin-top: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
 
@@ -13053,8 +13087,9 @@ main {
     margin-bottom: 20px;
 }
 .card {
-    background-color: #0b1322;
+    background-color: var(--background-color-1);
     padding: 20px;
+    border: 0.1px solid #ffffff3a;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -13119,14 +13154,14 @@ main {
     flex-grow: 1;
     padding: 10px;
     border: 1px solid #e2e8f0;
-    border-radius: 70px;
+    border-radius: 10px;
 }
 .voucher button {
-    background-color: #2d3748;
+    background-color: var(--color-primary);
     color: #ffffff;
     padding: 10px 10px;
     border: none;
-    border-radius: 70px;
+    border-radius: 10px;
     cursor: pointer;
     width: 120px;
     max-width: 150px;
@@ -13186,21 +13221,40 @@ main {
       cursor: pointer;
   }
 
+  .icona {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;  
+    height: 30px; 
+    background-color: #ffffff00;  
+    border-radius: 9px;  
+    cursor: pointer;
+    border: none;  
+    transition: background-color 0.3s ease;  
+  }
 
-.icon {
-  padding-bottom: 4px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 4px;
-  background-color: #98cff4;
-  border-radius: 50%;
-  margin-right: 20px;
-  color:white;
-}
+  .icon {
+    position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; 
+    height: 30px; 
+    background-color: rgba(0, 204, 255, 0.354);
+    border-radius: 8px;
+    cursor: pointer;
+  }
 
-.icon:hover {
-  color: rgb(110, 110, 110);
-}
+  .icon i {
+    font-size: 15px; 
+    color: rgb(255, 255, 255);
+  }
+  .icon i:hover {
+    color: rgb(0, 128, 255);
+  }
+
+
 
 
 /*------------------------------
@@ -14488,6 +14542,12 @@ iframe {
 /*--------------------------
     Button Styles 
 ----------------------------*/
+
+
+.butonso{
+  background:var(--color-linkedin) ;
+}
+
 .button-group {
   margin: -5px;
 }
@@ -14504,7 +14564,7 @@ button.btn {
   border: none;
   color: var(--color-white);
   padding: 10px 16px;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: var(--transition);
   letter-spacing: 0.5px;
   width: auto;
@@ -19359,10 +19419,10 @@ button .small-image {
   width: auto;
 }
 .product-tab-nav .nav button.nav-link {
+  background-color: var(--color-facebook);
   padding: 13px 30px;
   margin-right: 0px;
   color: var(--color-white);
-  border: 1px dashed var(--color-border);
   transition: var(--transition);
   font-size: 16px;
 }
@@ -19379,17 +19439,15 @@ button .small-image {
   border: 1px;
 }
 .product-tab-nav .nav button.nav-link:hover {
-  border: 1px solid var(--color-white);
   color: var(--color-white);
 }
 
 .product-tab-nav .nav button.nav-link:active {
-  border: 1px solid var(--color-white);
+
   color: var(--color-white);
 }
 
 .product-tab-nav .nav button.nav-link:focus {
-  border: 1px solid var(--color-white);
   color: var(--color-white);
 }
 
@@ -24396,7 +24454,13 @@ body.active-light-mode {
 .active-light-mode .expo-15-wrapper .thumb-wrapepr img.main,
 .active-light-mode .single-key,
 .active-light-mode .single-banner-shape-card,
-.active-light-mode .single-odometer.banner {
+.active-light-mode .single-odometer.banner,
+.active-light-mode .product-info,
+.active-light-mode .search input,
+.active-light-mode .product,
+.active-light-mode .jsdetail,
+.active-light-mode .consuk,
+.active-light-mode .card {
   background: var(--color-white);
 }
 .active-light-mode .slick-dots li button,

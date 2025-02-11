@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/odometer.css" />
     <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <!-- Style css -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
@@ -132,10 +134,10 @@
     <div class="container mt-5">
       <div class="row">
           <div class="col-lg-9">
-              <div class="product-info d-flex justify-content-between align-items-center">
+              <div class="product-info">
                   <div class="d-flex align-items-center">
                     <div class="icon">
-                      <button class="btn btn-link text-primary p-0 mr-3">
+                      <button class="icona">
                         <a href="index.html">
                           <i class="fas fa-arrow-left"></i>
                         </a>
@@ -150,7 +152,7 @@
                     <div class="details">
                         <div class="d-flex align-items-center justify-content-between w-100">
                             <h1 class="m-0" style="font-size: 24px;">Zoom One Pro</h1>
-                            <button class="btn btn-primary" style="height: fit-content;">Komunikasi</button>
+                            <button class="btn btn-primary-alta" style="height: fit-content;">Komunikasi</button>
                         </div>
                         <p class="mt-2" style="font-size: 16px;">Zoom One Pro dengan kapasitas hingga 100 peserta, siap untuk digunakan dan dikirimkan kepada Anda. Akun ini berlaku untuk durasi 1 bulan penuh.</p>
                     </div>
@@ -159,13 +161,16 @@
                   <div class="actions d-flex align-items-center">
                   </div>
               </div>
+              <div class="alertu" role="alert">
+                <span>Kamu belum login. Silahkan <a class="font-medium" href="login.html" style="color: #1d4ed8;">Login</a> terlebih dahulu.</span>
+              </div>
               <div class="search mt-4">
-                <input class="form-control" type="text" placeholder="Cari varian produk" style="color: rgb(255, 255, 255);"/>
+                <input class="product" type="text" placeholder="Cari varian produk"/>
             </div>
             
               <div class="row mt-4">
                   <div class="col-md-4">
-                    <div class="product p-3 shadow-sm" style="border-radius: 12px; background-color: #0b1322; color: white;" onclick="showBuyOptions(this)">
+                    <div class="product p-3 shadow-sm" style="border-radius: 12px;" onclick="showBuyOptions(this)">
                           <div class="discount">70%</div>
                           <h2>Zoom Pro 14 Hari Perpanjang</h2>
                           <div class="status available d-flex align-items-center">
@@ -179,7 +184,7 @@
                       </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="product p-3 shadow-sm" style="border-radius: 12px; background-color: #0b1322; color: white;" onclick="showBuyOptions(this)">
+                    <div class="product p-3 shadow-sm" style="border-radius: 12px;" onclick="showBuyOptions(this)">
                           <div class="discount">40%</div>
                           <h2>Zoom Pro 7 Hari</h2>
                           <div class="status available d-flex align-items-center">
@@ -193,7 +198,7 @@
                       </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="product p-3 shadow-sm" style="border-radius: 12px; background-color: #0b1322; color: white;" onclick="showBuyOptions(this)">
+                    <div class="product p-3 shadow-sm" style="border-radius: 12px;">
                         <div class="discount">0%</div>
                           <h2>Zoom 1 Bulan</h2>
                           <div class="status unavailable d-flex align-items-center">
@@ -406,25 +411,37 @@
 <!-- JS -->
 <script>
 function showBuyOptions(productElement) {
-    // Mengambil nama produk dari <h2>
     const productName = productElement.querySelector('h2').innerText;
-    
-    // Mengambil harga produk dari elemen dengan kelas .new-price
     const productPrice = productElement.querySelector('.new-price').innerText;
-
     const sidebar = document.getElementById('sidebar');
     sidebar.innerHTML = `
-     <div class="p-4 rounded-lg shadow-md h-full" style="background-color: #0b1322; border-radius: 10px;">
-            <h5 class="text-lg font-semibold mb-4">${productName}</h5>
-            <p class="text-gray-600 mb-4">Harga: <span class="text-blue-500 font-semibold">${productPrice}</span></p>
-            <label for="email">Tulis Email (Wajib)</label>
-            <input type="email" id="email" placeholder="email@gmail.com" class="w-full p-2 border rounded mb-3" />
-            <button onclick="window.location.href='beli.html'" class="buy-now-button" style="background-color: white; color: black;">Beli Sekarang</button>
+   <div class="jsdetail">
+    <h5 class="text-lg font-semibold mb-4">${productName}</h5>
 
-        </div>
+      <div class="alertx" role="alert">
+              Dikirim setelah di konfirmasi admin
+            </div>
+    
+    <!-- Input Email -->
+    <span for="email">Tulis Email (Wajib)</span>
+    <input type="email" id="email" placeholder="email@gmail.com" class="w-full p-2 border rounded-lg mb-3" style="border-radius: 8px; font-size: 15px; margin-top: 4px;" />
+    <!-- Subtotal Section -->
+<div class="subtotal mb-4" style="display: flex; justify-content: space-between; align-items: start; margin-top: 20px;">
+    <p>Subtotal:</p>
+    <p class="text-blue-500 font-semibold">${productPrice}</p>
+</div>
+
+<!-- Button -->
+<button onclick="window.location.href='beli.html'" class="buy-now-button" style="background-color: var(--color-primary); color: white;">
+    Beli Sekarang
+</button>
+
+
     `;
-}
+
+  }
 </script>
+
 
 
 
