@@ -151,8 +151,11 @@
                     <img alt="Zoom logo" src="https://boboku.store/images/products/UhOuma9oHC.png"/>
                     <div class="details">
                         <div class="d-flex align-items-center justify-content-between w-100">
-                            <h1 class="m-0" style="font-size: 24px;">Zoom One Pro</h1>
-                            <button class="btn btn-primary-alta" style="height: fit-content;">Komunikasi</button>
+                            <h2 class="m-0" style="font-size: 30px;">Zoom One Pro</h2>
+                            <button class="btn btn-primary-alta" style="height: fit-content; background-color: rgb(34, 45, 86); color: white; border: none;">
+                              Komunikasi
+                          </button>
+                          
                         </div>
                         <p class="mt-2" style="font-size: 16px;">Zoom One Pro dengan kapasitas hingga 100 peserta, siap untuk digunakan dan dikirimkan kepada Anda. Akun ini berlaku untuk durasi 1 bulan penuh.</p>
                     </div>
@@ -162,7 +165,7 @@
                   </div>
               </div>
               <div class="alertu" role="alert">
-                <span>Kamu belum login. Silahkan <a class="font-medium" href="login.html" style="color: #1d4ed8;">Login</a> terlebih dahulu.</span>
+                <span>Kamu belum login. Silahkan <a class="font-medium" href="login.html" style="color: rgb(0 163 255);">Login</a> terlebih dahulu.</span>
               </div>
               <div class="search mt-4">
                 <input class="input" type="text" placeholder="Cari varian produk"/>
@@ -416,25 +419,28 @@ function showBuyOptions(productElement) {
     const sidebar = document.getElementById('sidebar');
     sidebar.innerHTML = `
    <div class="jsdetail">
-    <h5 class="text-lg font-semibold mb-4">${productName}</h5>
+    <h5 class="d-flex justify-content-between align-items-center border-bottom pb-4 mb-4">${productName}</h5>
 
       <div class="alertx" role="alert">
               Dikirim setelah di konfirmasi admin
             </div>
     
     <!-- Input Email -->
-    <span for="email">Tulis Email (Wajib)</span>
-    <input type="email" id="email" placeholder="email@gmail.com" class="w-full p-2 border rounded-lg mb-3" style="border-radius: 8px; font-size: 15px; margin-top: 4px;" />
+   <span for="email" class="color-white" style="font-size: 16px; margin-top: 20px; display: block;">Tulis Email (Wajib)</span>
+    <input type="email" id="email" placeholder="email@gmail.com" class="w-full border rounded-lg mb-3" style="border-radius: 8px; font-size: 15px; margin-top: 4px;" />
     <!-- Subtotal Section -->
-<div class="subtotal mb-4" style="display: flex; justify-content: space-between; align-items: start; margin-top: 20px;">
-    <p>Subtotal:</p>
-    <p class="text-blue-500 font-semibold">${productPrice}</p>
+<div class="subtotal mb-4" style="display: flex; justify-content: space-between; align-items: start; margin-top: 10px;">
+    <span class="color-white" style="font-size: 16px;">Subtotal:</span>
+    <span class="color-white font-semibold" style="font-size: 18px;">${productPrice}</span>
 </div>
 
 <!-- Button -->
-<button onclick="window.location.href='beli.html'" class="buy-now-button" style="background-color: var(--color-primary); color: white;">
-    Beli Sekarang
+
+<button onclick="window.location.href='beli.html'" class="button" style="background-color: var(--color-primary); color: white; font-size: 16px; font-weight: 500; padding: 10px 20px; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+  <i class="fas fa-shopping-basket" style="margin-right: 8px;"></i>
+  Beli Sekarang
 </button>
+
 
 
     `;
