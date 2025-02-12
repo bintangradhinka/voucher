@@ -12824,6 +12824,51 @@ span.rn-badge-card::before {
   padding: 20px;
   margin-top: 10px;
 }
+
+.cash {
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.cash2 {
+  border: 0.1px solid white;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.harga {
+  border-radius: 8px;
+  padding: 10px;
+  align-items: center;
+  gap: 16px;
+}
+
+.harga img {
+  width: 10px;
+  height: 50px;
+}
+
+.harga p {
+  margin: 0;
+}
+
+.harga .fee {
+  color: #63b3ed;
+}
+
+.harga .name {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.harga .price {
+  color: #ffffff;
+}
+
+
 /*------------------------------
    Product
 --------------------------------*/
@@ -12846,7 +12891,7 @@ span.rn-badge-card::before {
   justify-content: space-between;
   align-items: center;
   background-color:var(--background-color-1);
-  outline: 0.1px solid #ffffff3a;
+  border: 0.1px solid #ffffff3a;
   padding: 0.1px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -12971,7 +13016,7 @@ span.rn-badge-card::before {
 }
 
 .product:hover {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgba(0, 132, 255, 0.442);
 }
 .product h2 {
   font-size: 18px;
@@ -13225,10 +13270,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;  
-    height: 30px; 
+    width: 40px;  
+    height: 25px; 
     background-color: #ffffff00;  
-    border-radius: 9px;  
+    border-radius: 8px;  
     cursor: pointer;
     border: none;  
     transition: background-color 0.3s ease;  
@@ -13239,19 +13284,20 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px; 
-    height: 30px; 
-    background-color: rgba(0, 204, 255, 0.354);
+    width: 40px; 
+    height: 25px; 
+    background-color: rgb(0 113 255 / 35%);
+    ;
     border-radius: 8px;
     cursor: pointer;
   }
 
   .icon i {
     font-size: 15px; 
-    color: rgb(255, 255, 255);
+    color: rgb(82 216 255);
   }
   .icon i:hover {
-    color: rgb(0, 128, 255);
+    color: rgb(255, 255, 255);
   }
 
 
@@ -14570,7 +14616,7 @@ button.btn {
   width: auto;
   border: 0 none;
   box-shadow: none;
-  outline: none;
+  outline: 0.1px solid #000;
 }
 a.btn.btn-primary,
 button.btn.btn-primary {
@@ -19330,7 +19376,7 @@ button .small-image {
 .isotop-filter button.is-checked,
 .isotop-filter button:hover,
 .isotop-filter button:focus {
-  color: var(--color-primary) !important;
+  color: var(--color-white) !important;
   background: var(--color-primary-alta);
   border-color: var(--color-primary-alta);
 }
@@ -24419,7 +24465,9 @@ body.active-light-mode {
   textarea,
 .active-light-mode .nuron-information input,
 .active-light-mode .newsletter-wrapper input,
-.active-light-mode .forum-search .input-group input {
+.active-light-mode .forum-search .input-group input,
+.active-light-mode .cash,
+.active-light-mode .cash2 {
   background: var(--color-gray-2);
 }
 .active-light-mode .left-header-style .authore-profile {

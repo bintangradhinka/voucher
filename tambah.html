@@ -1,93 +1,67 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chronos ML</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-  <style>
-
-  
-    .container {
-      background-color: rgba(45, 55, 72, 0.8);
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      width: 100%;
-      max-width: 64rem;
-      position: relative;
-    }
-    .back-button {
-      position: absolute;
-      top: 0.5rem;
-      left: 0.5rem;
-      background-color: rgba(59, 130, 246, 0.8);
-      color: white;
-      padding: 0.5rem;
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
-    }
-    .logo {
-      border-radius: 0.5rem;
-      width: 6rem;
-      height: 6rem;
-    }
-    .content {
-      margin-left: 1rem;
-      flex: 1;
-    }
-    .title {
-      color: white;
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-    .description {
-      color: #a0aec0;
-    }
-    .link {
-      color: #4299e1;
-      text-decoration: none;
-    }
-    .buttons {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .button {
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      border: none;
-      cursor: pointer;
-    }
-    .button-primary {
-      background-color: #4299e1;
-      color: white;
-    }
-    .button-secondary {
-      background-color: #4a5568;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <style>
+        body {
+            background-color: #1a202c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            gap: 16px;
+        }
+        .card {
+            background-color: #2d3748;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .card img {
+            width: 100px;
+            height: 50px;
+        }
+        .card p {
+            margin: 0;
+        }
+        .card .fee {
+            color: #63b3ed;
+        }
+        .card .name {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .card .price {
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <button class="back-button">
-      <i class="fas fa-arrow-left"></i>
-    </button>
-    <img src="https://storage.googleapis.com/a1aa/image/wwhzGeerFcsIKb3zo3TEkAUz6xgBbqk_oNdLJ9A5adI.jpg" alt="Chronos VIP logo with a muscular character and the text 'CHRONOSVIP'" class="logo">
-    <div class="content">
-      <h2 class="title">Chronos ML</h2>
-      <p class="description">Mobile Legends Chronos</p>
-      <a href="#" class="link">Lihat selengkapnya</a>
+    <div class="container">
+        <div class="card">
+            <img src="https://storage.googleapis.com/a1aa/image/iKyHzERxr6Zhjp1_P6ExPqEMo38ycCs9mMytKv9gtmk.jpg" alt="Indomaret logo with text 'mudah dan hemat'">
+            <div>
+                <p class="fee">Biaya +Rp. 3.500</p>
+                <p class="name">Indomaret</p>
+                <p class="price">Rp. 15.300</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://storage.googleapis.com/a1aa/image/Fz31Qy7YGAdFQwWGFlQFClHT9jTsmfdDPUGf7JUGBNA.jpg" alt="Alfamidi logo">
+            <div>
+                <p class="fee">Biaya +Rp. 3.500</p>
+                <p class="name">Alfamidi</p>
+                <p class="price">Rp. 15.300</p>
+            </div>
+        </div>
     </div>
-    <div class="buttons">
-      <button class="button button-primary">Mobile Legends</button>
-      <button class="button button-secondary">
-        <i class="fas fa-share-alt"></i>
-      </button>
-    </div>
-  </div>
 </body>
 </html>
