@@ -165,7 +165,7 @@
                   </div>
               </div>
               <div class="alertu" role="alert">
-                <span>Kamu belum login. Silahkan <a class="font-medium" href="login.html" style="color: rgb(0 163 255);">Login</a> terlebih dahulu.</span>
+                <span>Kamu belum login. Silahkan <a class="font-medium" href="login.html" style="color: rgb(0, 163, 255,1);">Login</a> terlebih dahulu.</span>
               </div>
               <div class="search mt-4">
                 <input class="input" type="text" placeholder="Cari varian produk"/>
@@ -259,7 +259,7 @@
                   data-sal-duration="800"
                   data-sal-delay="150"
                 >
-                  <a style="font-size: 20px;" href="create.html" class="btn btn-primary-alta btn-large"
+                  <a style="font-size: 15px;" href="create.html" class="btn btn-primary-alta btn-large"
                     >Daftar Sekarang</a
                   >
                 </div>
@@ -419,14 +419,14 @@ function showBuyOptions(productElement) {
     const sidebar = document.getElementById('sidebar');
     sidebar.innerHTML = `
    <div class="jsdetail">
-    <h5 class="d-flex justify-content-between align-items-center border-bottom pb-4 mb-4">${productName}</h5>
+    <h6 class="d-flex justify-content-between align-items-center border-bottom pb-4 mb-4">${productName}</h6>
 
       <div class="alertx" role="alert">
               Dikirim setelah di konfirmasi admin
             </div>
     
     <!-- Input Email -->
-   <span for="email" class="color-white" style="font-size: 16px; margin-top: 20px; display: block;">Tulis Email (Wajib)</span>
+   <span for="email" class="color-white" style="font-size: 15.5px; margin-top: 20px; display: block; font-weight: 500;">Tulis Email (Wajib)</span>
     <input type="email" id="email" placeholder="email@gmail.com" class="w-full border rounded-lg mb-3" style="border-radius: 8px; font-size: 15px; margin-top: 4px;" />
     <!-- Subtotal Section -->
 <div class="subtotal mb-4" style="display: flex; justify-content: space-between; align-items: start; margin-top: 10px;">
@@ -435,8 +435,7 @@ function showBuyOptions(productElement) {
 </div>
 
 <!-- Button -->
-
-<button onclick="window.location.href='beli.html'" class="button" style="background-color: var(--color-primary); color: white; font-size: 16px; font-weight: 500; padding: 10px 20px; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+<button onclick="window.location.href='beli.html'" class="button" style="background-color: var(--color-primary); color: white; font-size: 13px; padding: 10px 20px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-weight: 400;">
   <i class="fas fa-shopping-basket" style="margin-right: 8px;"></i>
   Beli Sekarang
 </button>

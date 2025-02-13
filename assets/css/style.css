@@ -6551,7 +6551,7 @@ input[type="email"],
 input[type="number"],
 input[type="tel"],
 textarea {
-  font-size: var(--font-size-b2);
+  font-size: var(--font-size-b1);
   font-weight: 400;
   height: auto;
   line-height: 28px;
@@ -12041,8 +12041,8 @@ body.sal-disabled [data-sal|="flip"] {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .haeder-default .header-inner {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -12829,12 +12829,17 @@ span.rn-badge-card::before {
   border: 1px solid white;
   border-radius: 8px;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  cursor: pointer;
 }
 
 .cash2 {
   border: 0.1px solid white;
   border-radius: 8px;
-  padding: 10px;
+  padding: 1px;
   display: flex;
   align-items: center;
 }
@@ -12843,7 +12848,7 @@ span.rn-badge-card::before {
   border-radius: 8px;
   padding: 10px;
   align-items: center;
-  gap: 16px;
+  margin-left: 10px;
 }
 
 .harga img {
@@ -12856,16 +12861,40 @@ span.rn-badge-card::before {
 }
 
 .harga .fee {
-  color: #63b3ed;
+  color: #00b3ff;
+  font-size: 12px;
+  font-weight: 300;
 }
 
 .harga .name {
   color: #ffffff;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 15px;
 }
 
 .harga .price {
   color: #ffffff;
+  font-size: 15px;
+}
+/*------------------------------
+   Arrow Icon
+--------------------------------*/
+
+.arrow-icon {
+  font-size: 18px;
+  color: #b0b0b0;
+  transition: transform 0.3s ease;
+}
+
+button[aria-expanded="true"] .arrow-icon {
+  transform: rotate(180deg);
+}
+.text-and-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px;
+  margin-left: 10px;
 }
 
 
@@ -12919,7 +12948,7 @@ span.rn-badge-card::before {
   color: #C2C6CC;
   font-size: 15px;
   margin-bottom: 100px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .product-info .details a {
   color: #3b82f6;
@@ -12955,20 +12984,20 @@ span.rn-badge-card::before {
   cursor: pointer;
 }
 .alertu {
-  background-color: rgba(34, 45, 86, 0.378);
-  color: white;
+  background-color: rgba(34, 45, 86, 0.268);
+  color: rgb(58, 130, 255);
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   border-left: 4px solid rgb(57, 119, 226);
 }
 .alertx {
-  background-color: rgba(178, 34, 34, 0.393);
-  color: #fffffff4;
+  background-color: rgba(234, 181, 5, 0.167);
+  color: rgb(234, 181, 5);
   padding: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-left: 4px solid rgb(220, 53, 69) ;
+  border-left: 4px solid rgb(234, 181, 5) ;
 }
 
 .alert {
@@ -12988,7 +13017,7 @@ span.rn-badge-card::before {
 .search input {
   width: 100%;
   background-color: var(--background-color-1);
-  padding: 15px;
+  padding: 10px;
   border: 1px solid #ffffff3a;
   border-radius: 8px;
 }
@@ -13017,7 +13046,7 @@ span.rn-badge-card::before {
 }
 
 .product:hover {
-  background-color: rgba(0, 132, 255, 0.442);
+  background-color: rgba(34, 45, 86, 0.48);
 }
 .product h2 {
   font-size: 18px;
@@ -13087,7 +13116,7 @@ span.rn-badge-card::before {
 
 input[type="email"] {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   border: 2px solid #d1d5db;
   border-radius: 6px;
   margin-bottom: 15px;
@@ -13140,6 +13169,11 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
+.card h3 {
+ font-size: 18px;
+ font-weight: normal;
+}
+
 .card h2 {
     font-size: 20px;
     font-weight: bold;
@@ -13223,8 +13257,8 @@ main {
     margin-bottom: 20px;
 }
 .payment-methods .icons img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    margin-left: 10px;
 }
 .payment-methods .grid {
     display: grid;
@@ -19343,7 +19377,7 @@ button .small-image {
 .isotop-filter {
   flex-wrap: wrap;
   margin: -5px;
-  max-width: 55%; 
+  max-width: 55em; 
   padding: 10px 20px; 
   margin-left: auto;
   margin-right: auto;
@@ -19479,15 +19513,15 @@ button .small-image {
 .product-tab-nav .nav button.nav-link {
   background-color: var(--color-facebook);
   padding: 13px 30px;
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: 2%;
+  margin-left: 2%;
   color: var(--color-white);
   transition: var(--transition);
   font-size: 15px;
 }
 @media only screen and (max-width: 526px) {
   .product-tab-nav .nav button.nav-link {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 .product-tab-nav .nav button.nav-link:last-child {
     margin-bottom: 0;
@@ -21437,6 +21471,8 @@ body.modal-open {
 /*---------------------------
  Masonary Item  
 -----------------------------*/
+
+
 .grid-metro3 {
   margin: 0 -15px;
 }
@@ -21523,6 +21559,7 @@ body.modal-open {
 
 .grid-metro5 {
   margin: 0 -15px;
+  display: grid;
 }
 .grid-metro5 .grid-metro-item {
   width: 20%;
@@ -21541,12 +21578,13 @@ body.modal-open {
 }
 @media only screen and (max-width: 767px) {
   .grid-metro5 .grid-metro-item {
-    width: 50%;
+    width: 60%;
   }
 }
 @media only screen and (max-width: 575px) {
   .grid-metro5 .grid-metro-item {
-    width: 100%;
+    width: 50%;
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 .grid-metro5 .resizer {
