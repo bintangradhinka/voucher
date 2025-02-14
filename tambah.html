@@ -1,92 +1,76 @@
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Web Page
-  </title>
-  <style>
-   body {
-      background-color: #1a202c;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      background-color: #2d3748;
-      border-radius: 0.5rem;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 64rem;
-      margin: auto;
-    }
-    @media (min-width: 768px) {
-      .container {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-    .text-content {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    @media (min-width: 768px) {
-      .text-content {
-        text-align: left;
-        margin-bottom: 0;
-      }
-    }
-    .text-content h1 {
-      color: white;
-      font-size: 1.875rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    .text-content p {
-      color: #a0aec0;
-      margin-bottom: 1.5rem;
-    }
-    .text-content button {
-      background-color: #4299e1;
-      color: white;
-      padding: 0.5rem 1.5rem;
-      border: none;
-      border-radius: 0.375rem;
-      cursor: pointer;
-    }
-    .image-content img {
-      width: 12rem;
-      height: 12rem;
-    }
-    @media (min-width: 768px) {
-      .image-content img {
-        width: 16rem;
-        height: 16rem;
-      }
-    }
-  </style>
- </head>
- <body>
-  <div class="container">
-   <div class="text-content">
-    <h1>
-     Nikmati Berbagai Kemudahan Dengan Mendaftar
-    </h1>
-    <p>
-     Bebas biaya admin, lebih mudah kelola transaksi dan pesanan, bebas mengatur jumlah juga menyimpannya ke keranjang. Tunggu apa lagi?
-    </p>
-    <button>
-     Daftar Sekarang
-    </button>
-   </div>
-   <div class="image-content">
-    <img alt="3D illustration of a person with sunglasses and a smile" height="200" src="https://storage.googleapis.com/a1aa/image/GyALi4lEOFqr4ope3bNmEHTiDR2twzDCxFFGdPj9c44.jpg" width="200"/>
-   </div>
-  </div>
- </body>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Grid</title>
+    <style>
+        .grid-metro5 {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(5, 1fr);
+            padding: 15px;
+        }
+        .grid-metro-item {
+            background: #f4f4f4;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .grid-metro-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .btn {
+            display: block;
+            margin-top: 10px;
+            padding: 8px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Responsif */
+        @media (max-width: 1199px) {
+            .grid-metro5 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 991px) {
+            .grid-metro5 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 575px) {
+            .grid-metro5 {
+                grid-template-columns: repeat(3, 1fr); /* 3 kolom di tampilan mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-metro5">
+        <div class="grid-metro-item">
+            <img src="https://boboku.store/images/products/IGmOJyzQx4.png" alt="Canva">
+            <a href="product-details.html" class="btn">Stok Ready</a>
+        </div>
+        <div class="grid-metro-item">
+            <img src="https://boboku.store/images/products/IpLrRjGirn.png" alt="Google Drive">
+            <a href="product-details.html" class="btn">Stok Ready</a>
+        </div>
+        <div class="grid-metro-item">
+            <img src="https://boboku.store/images/products/h2lL1sCTc5.png" alt="YouTube Premium">
+            <a href="product-details.html" class="btn">Stok Ready</a>
+        </div>
+        <div class="grid-metro-item">
+            <img src="https://boboku.store/images/products/fx6hgmkcA2.png" alt="Spotify">
+            <a href="product-details.html" class="btn">Stok Ready</a>
+        </div>
+        <div class="grid-metro-item">
+            <img src="https://boboku.store/images/products/UhOuma9oHC.png" alt="Zoom One Pro">
+            <a href="product-details.html" class="btn">Stok Ready</a>
+        </div>
+    </div>
+</body>
 </html>

@@ -640,6 +640,24 @@ ol ul {
   margin-top: 0 !important;
 }
 
+.py-1 {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+
+.pt-6 {
+  padding-top: 1.25rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.25rem;
+}
+
+.px-6 {
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
 .mb--0 {
   margin-bottom: 0 !important;
 }
@@ -13334,9 +13352,21 @@ main {
     color: rgb(255, 255, 255);
   }
 
+/*------------------------------
+    Jesz
+--------------------------------*/
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
 
+.w-full {
+  width: 100%;
+}
 
-
+.flex {
+  display: flex;
+}
 /*------------------------------
     Popup Menu Styles  
 --------------------------------*/
@@ -19116,7 +19146,6 @@ button .small-image {
 .product-style-one.with-placeBid .card-thumbnail span.btn {
   position: absolute;
   top: 90%;
-  left: 32%;
   /* transform: scale(0); */
   border-radius: 10px;
   padding: 5px 10px;
@@ -19138,10 +19167,9 @@ button .small-image {
   align-content: center;
 }
 .product-style-one .card-thumbnail a img {
-  border-radius: 11px;
+  border-radius: 1rem;
   object-fit: cover;
-  width: 80%;
-  height: 170px;
+  max-width:80%;
   transition: 0.5s;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.233)
 
@@ -21556,60 +21584,71 @@ body.modal-open {
     width: 100%;
   }
 }
-
 .grid-metro5 {
   margin: 0 -15px;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+/* Default: 5 item per baris */
 .grid-metro5 .grid-metro-item {
   width: 20%;
   padding: 0 15px;
   margin-top: 30px;
 }
+
+/* 5 item per baris untuk ukuran layar 992px ke atas */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .grid-metro5 .grid-metro-item {
+    width: 20%;
+  }
+}
+
+/* 4 item per baris untuk ukuran layar 768px - 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .grid-metro5 .grid-metro-item {
+    width: 25%;
+  }
+}
+
+/* 4 item per baris untuk ukuran layar <= 767px */
+@media only screen and (max-width: 767px) {
+  .grid-metro5 .grid-metro-item {
+    width: 25%;
+  }
+}
+
+/* 3 item per baris tetap untuk layar <= 575px */
+@media only screen and (max-width: 575px) {
   .grid-metro5 .grid-metro-item {
     width: 33.33%;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .grid-metro5 .grid-metro-item {
-    width: 50%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .grid-metro5 .grid-metro-item {
-    width: 60%;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .grid-metro5 .grid-metro-item {
-    width: 50%;
-    grid-template-columns: repeat(3, 1fr); 
-  }
-}
+
+/* Styling resizer agar tetap responsif */
 .grid-metro5 .resizer {
   width: 20%;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+/* Sesuaikan resizer dengan ukuran layar */
+@media only screen and (max-width: 991px) {
+  .grid-metro5 .resizer {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-metro5 .resizer {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
   .grid-metro5 .resizer {
     width: 33.33%;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .grid-metro5 .resizer {
-    width: 50%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .grid-metro5 .resizer {
-    width: 50%;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .grid-metro5 .resizer {
-    width: 100%;
-  }
-}
+
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .sidebar-header .grid-metro4 .grid-metro-item {
@@ -21630,6 +21669,33 @@ body.modal-open {
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .nft-left-sidebar-nav .grid-metro4 .resizer {
     width: 33.33%;
+  }
+}
+
+
+.grid-metro6 {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 15px;
+}
+
+@media (max-width: 1199px) {
+  .grid-metro6 {
+      grid-template-columns: repeat(5,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 768px) and (max-width: 991px){
+.grid-metro6 {
+      grid-template-columns: repeat(4,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .grid-metro6 {
+      grid-template-columns: repeat(3,minmax(0,1fr)); 
+
   }
 }
 
@@ -21669,6 +21735,9 @@ body.modal-open {
   color: var(--color-white);
 }
 
+.grid {
+  display: grid;
+}
 /*-------------------------------
     Slick Arrow And Dots Styles  
 ----------------------------------*/

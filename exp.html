@@ -27,15 +27,254 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
 </head>
-<div class="container-fluid">
-      <div class="row">
-          <div class="col-4 col-lg-6">
-            <p class="bg-primary .visually-hidden-focusable" id="kanan">kanan</p>
+<style>
+  .grid-metro6 {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(5, 1fr);
+      padding: 15px;
+  }
+
+  @media (max-width: 1199px) {
+      .grid-metro6 {
+          grid-template-columns: repeat(5,minmax(0,1fr));
+      }
+  }
+
+@media (max-width: 768px) and (max-width: 991px){
+  .grid-metro6 {
+          grid-template-columns: repeat(4,minmax(0,1fr));
+      }
+}
+
+  @media (max-width: 575px) {
+      .grid-metro6 {
+          grid-template-columns: repeat(3,minmax(0,1fr)); 
+
+      }
+  }
+
+  .grid-metro-item {
+  aspect-ratio: 1/1; /* Menjaga item tetap persegi */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-thumbnail {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Agar gambar tetap proporsional */
+  border-radius: 5px;
+}
+</style>
+<div> </div>
+    <div class="col-lg-12">
+      <div class="grid-metro6">
+          <!-- start single product -->
+          <div class="grid-metro-item cat--1">
+              <div class="product-style-one no-overlay with-placeBid text-center">
+                  <div class="card-thumbnail">
+          
+                      <a href="product-details.html"><img src="https://boboku.store/images/products/IGmOJyzQx4.png" alt="NFT_portfolio"></a>
+                      <div class="flex justify-center w-full">
+                      <a href="product-details.html" class="btn btn-primary">Stok Ready</a>
+                  </div>
+                </div>
+   
+                  <div class="product-share-wrapper">
+               
+                     
+                  </div>
+                  <a href="product-details.html"><span class="product-name">Canva</span></a>
+                  <span class="latest-bid text-center">Editing</span>
+       
+              </div>
+          </div>
+          <div class="grid-metro-item cat--4">
+              <div class="product-style-one no-overlay with-placeBid text-center">
+                  <div class="card-thumbnail">
+          
+                      <a href="product-details.html"><img src="https://boboku.store/images/products/IpLrRjGirn.png" alt="NFT_portfolio"></a>
+                      <div class="flex justify-center w-full">
+                        <a href="product-details.html" class="btn btn-primary">Stok Ready</a>
+                    </div>
+                  </div>
+   
+                  <div class="product-share-wrapper">
+               
+                     
+                  </div>
+                  <a href="product-details.html"><span class="product-name">Google Drive</span></a>
+                  <span class="latest-bid text-center">Editing</span>
+       
+              </div>
+          </div>
+          <div class="grid-metro-item  cat--3">
+              <div class="product-style-one no-overlay with-placeBid text-center">
+                  <div class="card-thumbnail">
+          
+                      <a href="product-details.html"><img src="https://boboku.store/images/products/h2lL1sCTc5.png" alt="NFT_portfolio"></a>
+                      <div class="flex justify-center w-full">
+                        <a href="product-details.html" class="btn btn-primary">Stok Ready</a>
+                    </div>
+                  </div>
+   
+                  <div class="product-share-wrapper">
+               
+                     
+                  </div>
+                  <a href="product-details.html"><span class="product-name">Youtube Premium</span></a>
+                  <span class="latest-bid text-center">Editing</span>
+       
+              </div>
+          </div>
+          <div class="grid-metro-item cat--2">
+              <div class="product-style-one no-overlay with-placeBid text-center">
+                  <div class="card-thumbnail">
+          
+                      <a href="product-details.html"><img src="https://boboku.store/images/products/fx6hgmkcA2.png" alt="NFT_portfolio"></a>
+                      <div class="flex justify-center w-full">
+                        <a href="product-details.html" class="btn btn-primary">Stok Ready</a>
+                    </div>
+                  </div>
+   
+                  <div class="product-share-wrapper">
+               
+                     
+                  </div>
+                  <a href="product-details.html"><span class="product-name">Spotify</span></a>
+                  <span class="latest-bid text-center">Editing</span>
+       
+              </div>
+          </div>
+          <div class="grid-metro-item cat--5">
+              <div class="product-style-one no-overlay with-placeBid text-center">
+                  <div class="card-thumbnail">
+          
+                      <a href="product-details.html"><img src="https://boboku.store/images/products/UhOuma9oHC.png" alt="NFT_portfolio"></a>
+                      <div class="flex justify-center w-full">
+                        <a href="product-details.html" class="btn btn-primary">Stok Ready</a>
+                    </div>
+                  </div>
+   
+                  <div class="product-share-wrapper">
+               
+                     
+                  </div>
+                  <a href="product-details.html"><span class="product-name">Zoom One Pro</span></a>
+                  <span class="latest-bid text-center">Editing</span>
+       
+              </div>
+          </div>
+          <div class="grid-metro-item cat--3">
+              <div class="product-style-one no-overlay with-placeBid text-center">
+                  <div class="card-thumbnail">
+          
+                      <a href="product-details.html"><img src="https://boboku.store/images/products/mVyiHBAKbq.png" alt="NFT_portfolio"></a>
+                      <div class="flex justify-center w-full">
+                        <a href="product-details.html" class="btn btn-primary">Stok Ready</a>
+                    </div>
+                  </div>
+   
+                  <div class="product-share-wrapper">
+               
+                     
+                  </div>
+                  <a href="product-details.html"><span class="product-name">Vidio Platinum</span></a>
+                  <span class="latest-bid text-center">Editing</span>
+       
+              </div>
+          </div>
+          <div class="grid-metro-item cat--3">
+            <div class="product-style-one no-overlay with-placeBid text-center">
+                <div class="card-thumbnail">
+        
+                    <a href="product-details.html"><img src="https://boboku.store/images/products/6nODznj3Gz.png" alt="NFT_portfolio"></a>
+                    <div class="flex justify-center w-full">
+                      <a href="product-details.html" class="btn btn-primary">Stok Ready</a>
+                  </div>
+                </div>
+ 
+                <div class="product-share-wrapper">
+             
+                   
+                </div>
+                <a href="product-details.html"><span class="product-name">Viu Premium</span></a>
+                <span class="latest-bid text-center">Editing</span>
+     
+            </div>
         </div>
-        <div class="col-8 col-lg-6 bg-primary">
+        <div class="grid-metro-item cat--1">
+          <div class="product-style-one no-overlay with-placeBid text-center">
+              <div class="card-thumbnail">
+      
+                  <a href="product-details.html"><img src="https://boboku.store/images/products/porLi5k6JO.png" alt="NFT_portfolio"></a>
+                  <div class="flex justify-center w-full">
+                    <a href="product-details.html" class="btn btn-primary">Stok Ready</a>
+                </div>
+              </div>
+
+              <div class="product-share-wrapper">
+           
+                 
+              </div>
+              <a href="product-details.html"><span class="product-name">Prime Video</span></a>
+              <span class="latest-bid text-center">Editing</span>
+   
+          </div>
+      </div>
+      <div class="grid-metro-item cat--1">
+        <div class="product-style-one no-overlay with-placeBid text-center">
+            <div class="card-thumbnail">
+    
+                <a href="product-details.html"><img src="https://boboku.store/images/products/eeSP4OCkvU.png" alt="NFT_portfolio"></a>
+                <div class="flex justify-center w-full">
+                  <a href="product-details.html" class="btn btn-primary">Stok Ready</a>
+              </div>
+            </div>
+
+            <div class="product-share-wrapper">
+         
+               
+            </div>
+            <a href="product-details.html"><span class="product-name">Alight Motion</span></a>
+            <span class="latest-bid text-center">Editing</span>
+ 
         </div>
     </div>
-</div>
+    <div class="grid-metro-item cat--2">
+      <div class="product-style-one no-overlay with-placeBid text-center">
+          <div class="card-thumbnail">
+  
+              <a href="product-details.html"><img src="https://boboku.store/images/products/nyZZ8nRCDk.png" alt="NFT_portfolio"></a>
+              <div class="flex justify-center w-full">
+                <a href="product-details.html" class="btn btn-primary">Stok Ready</a>
+            </div>
+          </div>
+
+          <div class="product-share-wrapper">
+       
+             
+          </div>
+          <a href="product-details.html"><span class="product-name">Apple Music</span></a>
+          <span class="latest-bid text-center">Editing</span>
+
+      </div>
+  </div>
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/vendor/jquery.js"></script>
 <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
