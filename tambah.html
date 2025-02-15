@@ -3,74 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produk Grid</title>
+    <title>Filter Produk</title>
     <style>
-        .grid-metro5 {
-            display: grid;
-            gap: 15px;
-            grid-template-columns: repeat(5, 1fr);
-            padding: 15px;
-        }
-        .grid-metro-item {
-            background: #f4f4f4;
-            padding: 15px;
-            text-align: center;
-            border-radius: 8px;
-        }
-        .grid-metro-item img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-        .btn {
-            display: block;
-            margin-top: 10px;
-            padding: 8px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Responsif */
-        @media (max-width: 1199px) {
-            .grid-metro5 {
-                grid-template-columns: repeat(3, 1fr);
-            }
+        body {
+            font-family: Arial, sans-serif;
         }
-        @media (max-width: 991px) {
-            .grid-metro5 {
-                grid-template-columns: repeat(2, 1fr);
-            }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        @media (max-width: 575px) {
-            .grid-metro5 {
-                grid-template-columns: repeat(3, 1fr); /* 3 kolom di tampilan mobile */
+
+        .product-tab-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .product-tab-nav .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+            border: none;
+            background: #f3f3f3;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .product-tab-nav .nav-link img.icon-filter {
+            max-width: 30px;
+            height: auto;
+            margin-right: 8px;
+        }
+
+        .product-tab-nav .nav-link:hover {
+            background: #ddd;
+        }
+
+        /* RESPONSIVE */
+        @media screen and (max-width: 768px) {
+            .product-tab-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .product-tab-nav .nav-link {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .product-tab-nav .nav-link img.icon-filter {
+                max-width: 25px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="grid-metro5">
-        <div class="grid-metro-item">
-            <img src="https://boboku.store/images/products/IGmOJyzQx4.png" alt="Canva">
-            <a href="product-details.html" class="btn">Stok Ready</a>
-        </div>
-        <div class="grid-metro-item">
-            <img src="https://boboku.store/images/products/IpLrRjGirn.png" alt="Google Drive">
-            <a href="product-details.html" class="btn">Stok Ready</a>
-        </div>
-        <div class="grid-metro-item">
-            <img src="https://boboku.store/images/products/h2lL1sCTc5.png" alt="YouTube Premium">
-            <a href="product-details.html" class="btn">Stok Ready</a>
-        </div>
-        <div class="grid-metro-item">
-            <img src="https://boboku.store/images/products/fx6hgmkcA2.png" alt="Spotify">
-            <a href="product-details.html" class="btn">Stok Ready</a>
-        </div>
-        <div class="grid-metro-item">
-            <img src="https://boboku.store/images/products/UhOuma9oHC.png" alt="Zoom One Pro">
-            <a href="product-details.html" class="btn">Stok Ready</a>
-        </div>
+
+<div class="container">
+    <div class="product-tab-nav">
+        <button data-filter="*" class="nav-link is-checked">
+            <img src="icon-all.png" alt="All" class="icon-filter">
+            <span class="filter-text">All</span>
+        </button>
+        <button data-filter=".cat--1" class="nav-link">
+            <img src="icon-editing.png" alt="Editing" class="icon-filter">
+            <span class="filter-text">Editing</span>
+        </button>
+        <button data-filter=".cat--2" class="nav-link">
+            <img src="icon-music.png" alt="Music" class="icon-filter">
+            <span class="filter-text">Music</span>
+        </button>
+        <button data-filter=".cat--3" class="nav-link">
+            <img src="icon-streaming.png" alt="Streaming" class="icon-filter">
+            <span class="filter-text">Streaming</span>
+        </button>
+        <button data-filter=".cat--4" class="nav-link">
+            <img src="icon-storage.png" alt="Storage" class="icon-filter">
+            <span class="filter-text">Storage</span>
+        </button>
+        <button data-filter=".cat--5" class="nav-link">
+            <img src="icon-komunikasi.png" alt="Komunikasi" class="icon-filter">
+            <span class="filter-text">Komunikasi</span>
+        </button>
     </div>
+</div>
+
 </body>
 </html>
