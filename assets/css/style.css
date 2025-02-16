@@ -18911,16 +18911,19 @@ button .small-image {
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rn-footer-one .footer-left .rn-footer-describe {
     padding: 0;
+    font-size: 18px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rn-footer-one .footer-left .rn-footer-describe {
     padding: 0;
+    font-size: 16px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 567px) {
   .rn-footer-one .footer-left .rn-footer-describe {
     padding: 0;
+    font-size: 14px;
   }
 }
 
@@ -18939,6 +18942,19 @@ button .small-image {
   transition: var(--transition);
   position: relative;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-list-one .single-list a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-list-one .single-list a {
+    font-size: 14px;
+  }
+}
+
 .footer-list-one .single-list a::after {
   position: absolute;
   content: "";
@@ -18966,16 +18982,33 @@ button .small-image {
   font-size: 24px;
   margin-bottom: 25px;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-widget .widget-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-widget .widget-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+
 .footer-widget.widget-quicklink {
   margin-left: 100px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer-widget.widget-quicklink {
+    font-size: 24px;
     margin-left: 0;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 567px) {
   .footer-widget.widget-quicklink {
+    font-size: 20px;
     margin-left: 0;
   }
 }
