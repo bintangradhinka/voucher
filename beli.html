@@ -506,6 +506,20 @@
 </svg>
 </div>
 
+<script>
+document.querySelectorAll('.cash').forEach(button => {
+    button.addEventListener('click', function () {
+        const targetId = this.getAttribute('data-bs-target'); 
+        const targetElement = document.querySelector(targetId);
+
+        document.querySelectorAll('.collapse').forEach(collapse => {
+            if (collapse !== targetElement) {
+                collapse.classList.remove('show');
+            }
+        });
+    });
+});
+</script>
 
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/vendor/jquery.js"></script>

@@ -1033,11 +1033,12 @@ ol ul {
   gap: .0rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .mx-7 {
-    gap: 0.75rem;
+    gap: 1rem;
   }
 }
+
 
 /* Untuk layar mobile (max-width: 480px) */
 @media (max-width: 480px) {
@@ -6601,6 +6602,22 @@ button,
 input {
   height: 40px;
   padding: 0 15px;
+}
+
+input[type="sun"],
+textarea{
+text-align: center;
+font-size: var(--font-size-b1);
+font-weight: 400;
+height: auto;
+line-height: 28px;
+background: transparent;
+-webkit-box-shadow: none;
+box-shadow: none;
+padding: 0 15px;
+outline: none;
+border: var(--border-width) solid var(--color-border);
+border-radius: var(--radius);
 }
 
 input[type="text"],
@@ -12846,33 +12863,6 @@ span.rn-badge-card::before {
 }
 
 /*------------------------------
-   Sukses
---------------------------------*/
-.bdy {
-
-  padding: 40px 0;
-  min-height: 100vh;
-}
-
-.consuk {
-  background-color: var(--background-color-1);
-  border-radius: 20px;
-  padding: 30px;
-  max-width: 700px;
-  margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  outline: 0.1px solid #ffffff3a;
-}
-
-.rounded-full {
-  border-radius: 50%;
-}
-
-
-.bold-text {
-  font-weight: bold;
-}
-/*------------------------------
   JsDetail
 --------------------------------*/
 .jsdetail {
@@ -12953,8 +12943,112 @@ button[aria-expanded="true"] .arrow-icon {
   gap: 2px;
   padding: 10px;
   margin-left: 10px;
-  overflow: scroll;
+  overflow-x: visible;
 }
+
+@media (max-width: 768px) { 
+  .text-and-icons {
+    overflow-x: scroll;
+  }
+}
+
+/*------------------------------
+   sukses
+--------------------------------*/
+.kard {
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.kard-dark {
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.grup-masukan {
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 1rem;
+  display: contents;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grup-masukan {
+      display: flex;
+  }
+}
+
+
+
+
+.grup-masukan input {
+  border: 1px solid #5e5e5e4f;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  flex-grow: 1;
+}
+
+
+.grup-masukan tombol {
+  margin-left: 8px;
+  padding: 8px;
+  background-color: #4a5568;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+.salin {
+  background: var(--color-gray);
+  display: flex;
+  font-weight: 500;
+  text-align: center;
+  font-size: 15px;
+  border: none;
+  color: var(--color-dark);
+  padding: 13px 16px;
+  border-radius: 8px;
+  transition: var(--transition);
+  letter-spacing: 0.5px;
+  width: auto;
+  border: 0 none;
+  box-shadow: none;
+}
+.tombol-unduh {
+  width: auto;
+  height: 3.1em;
+  background-color: white;
+  color: #2d3748;
+  padding: 8px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 0.5rem;
+  border: none;
+}
+.rincian {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 8px 0;
+
+}
+.teks-merah {
+  color: #f56565;
+}
+
 
 /*------------------------------
    Product
@@ -19752,7 +19846,6 @@ button .small-image {
 }
 
 .isotop-filter {
-  flex-wrap: wrap;
   margin: -5px;
   max-width: 55em; 
   padding: 10px 20px; 
@@ -19770,7 +19863,7 @@ button .small-image {
   border-radius: 8px;
   min-width: 95px;
   text-align: center;
-  margin: 5px;
+  margin: 0.1rem;
   line-height: 42px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
@@ -19913,7 +20006,7 @@ button .small-image {
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
   display: flex;
-  justify-content: center;
+  overflow-x: auto;
 }
 
 .product-tab-nav .nav button {
@@ -19930,7 +20023,7 @@ button .small-image {
 }
 @media only screen and (max-width: 526px) {
   .product-tab-nav .nav button.nav-link {
-    margin-bottom: 0px;
+
   }
 .product-tab-nav .nav button.nav-link:last-child {
     margin-bottom: 0;

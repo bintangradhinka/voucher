@@ -3,104 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filter Produk</title>
+    <title>Faktur Pembelian</title>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
+            background: #1d1f26;
+            color: white;
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
+            background: #252836;
             padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
         }
 
-        .product-tab-nav {
+        .header {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .grup-masukan {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: #2a2d37;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background: #1d1f26;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .copy-btn {
+            padding: 10px;
+            border-radius: 8px;
+            background: #f1f1f1;
+            border: none;
+            cursor: pointer;
+        }
+
+        .aksi {
+            display: flex;
             gap: 10px;
         }
 
-        .product-tab-nav .nav-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .bayar-btn {
+            background: #005bff;
+            color: white;
             padding: 10px 15px;
-            font-size: 16px;
-            text-align: center;
+            border-radius: 8px;
             border: none;
-            background: #f3f3f3;
             cursor: pointer;
-            border-radius: 6px;
-            transition: 0.3s;
+            font-weight: bold;
         }
 
-        .product-tab-nav .nav-link img.icon-filter {
-            max-width: 30px;
-            height: auto;
-            margin-right: 8px;
+        .perbarui-btn {
+            background: #f1f1f1;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
         }
 
-        .product-tab-nav .nav-link:hover {
-            background: #ddd;
+        .detail-pembayaran {
+            background: #1d1f26;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
         }
 
-        /* RESPONSIVE */
-        @media screen and (max-width: 768px) {
-            .product-tab-nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .product-tab-nav .nav-link {
-                font-size: 14px;
-                padding: 8px;
-            }
-
-            .product-tab-nav .nav-link img.icon-filter {
-                max-width: 25px;
-            }
+        .rincian {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
         }
+
+        .status {
+            background: #3a3d45;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .toggle {
+            text-align: right;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="product-tab-nav">
-        <button data-filter="*" class="nav-link is-checked">
-            <img src="icon-all.png" alt="All" class="icon-filter">
-            <span class="filter-text">All</span>
-        </button>
-        <button data-filter=".cat--1" class="nav-link">
-            <img src="icon-editing.png" alt="Editing" class="icon-filter">
-            <span class="filter-text">Editing</span>
-        </button>
-        <button data-filter=".cat--2" class="nav-link">
-            <img src="icon-music.png" alt="Music" class="icon-filter">
-            <span class="filter-text">Music</span>
-        </button>
-        <button data-filter=".cat--3" class="nav-link">
-            <img src="icon-streaming.png" alt="Streaming" class="icon-filter">
-            <span class="filter-text">Streaming</span>
-        </button>
-        <button data-filter=".cat--4" class="nav-link">
-            <img src="icon-storage.png" alt="Storage" class="icon-filter">
-            <span class="filter-text">Storage</span>
-        </button>
-        <button data-filter=".cat--5" class="nav-link">
-            <img src="icon-komunikasi.png" alt="Komunikasi" class="icon-filter">
-            <span class="filter-text">Komunikasi</span>
-        </button>
+    <div class="container">
+        <div class="header">
+            <h2>Faktur Pembelian</h2>
+            <div class="aksi">
+                <button class="bayar-btn">
+                    <i class="fas fa-lock"></i> BAYAR
+                </button>
+                <button class="perbarui-btn">
+                    <i class="fas fa-sync-alt"></i> Perbarui
+                </button>
+            </div>
+        </div>
+
+        <div class="grup-masukan">
+            <input type="text" value="BBKI1739956975CYTC" readonly />
+            <button class="copy-btn">
+                <i class="fas fa-copy"></i>
+            </button>
+        </div>
+
+        <div class="detail-pembayaran">
+            <div class="rincian">
+                <h3>Detail Pembayaran</h3>
+                <div class="toggle" onclick="toggleDetail()">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+
+            <div id="detail-content">
+                <div class="rincian">
+                    <span>Tanggal</span>
+                    <span>19 Februari 2025 - 16:22</span>
+                </div>
+                <div class="rincian">
+                    <span>Status</span>
+                    <span class="status">UNPAID</span>
+                </div>
+                <div class="rincian">
+                    <span>Total Harga</span>
+                    <span>Rp 21.300</span>
+                </div>
+                <div class="rincian">
+                    <span>Total Pajak</span>
+                    <span>899</span>
+                </div>
+                <div class="rincian">
+                    <span>Total Bayar</span>
+                    <span>Rp 22.199</span>
+                </div>
+                <div class="rincian">
+                    <span>Metode Pembayaran</span>
+                    <span>QRIS2</span>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+    <script>
+        function toggleDetail() {
+            let detail = document.getElementById("detail-content");
+            let icon = document.querySelector(".toggle i");
+
+            if (detail.style.display === "none") {
+                detail.style.display = "block";
+                icon.classList.remove("fa-chevron-down");
+                icon.classList.add("fa-chevron-up");
+            } else {
+                detail.style.display = "none";
+                icon.classList.remove("fa-chevron-up");
+                icon.classList.add("fa-chevron-down");
+            }
+        }
+        document.getElementById("detail-content").style.display = "none";
+    </script>
 
 </body>
 </html>
