@@ -13230,7 +13230,7 @@ button[aria-expanded="true"] .arrow-icon {
   cursor: pointer;
   display: block;
 }
-@media (max-width: 768px) { 
+@media (max-width: 568px) { 
   .product {
     display: flex;
     flex-wrap: wrap;
@@ -13248,6 +13248,19 @@ button[aria-expanded="true"] .arrow-icon {
   gap:1rem;
 }
 
+@media (max-width: 768px) { 
+  .flex2 {
+    display:block
+;
+  }
+}
+
+@media (max-width: 480px) { 
+  .flex2 {
+    display: block
+;
+  }
+}
 
 
 .seth2 {
