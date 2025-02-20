@@ -12985,16 +12985,19 @@ button[aria-expanded="true"] .arrow-icon {
 @media (min-width: 768px) {
   .grup-masukan {
       display: flex;
+      justify-content: space-between;
   }
 }
-
 
 
 
 .grup-masukan input {
   border: 1px solid #5e5e5e4f;
   color: white;
-  padding: 8px;
+  padding-right: 50px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
   border-radius: 8px;
   flex-grow: 1;
 }
@@ -13017,7 +13020,7 @@ button[aria-expanded="true"] .arrow-icon {
   font-size: 15px;
   border: none;
   color: var(--color-dark);
-  padding: 13px 16px;
+  padding: 15px 16px;
   border-radius: 8px;
   transition: var(--transition);
   letter-spacing: 0.5px;
@@ -13030,7 +13033,10 @@ button[aria-expanded="true"] .arrow-icon {
   height: 3.1em;
   background-color: white;
   color: #2d3748;
-  padding: 8px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
   border-radius: 8px;
   align-items: center;
   justify-content: center;
@@ -13045,8 +13051,12 @@ button[aria-expanded="true"] .arrow-icon {
   padding: 8px 0;
 
 }
-.teks-merah {
-  color: #f56565;
+.teks-col {
+  background-color: rgba(54, 63, 75, 0.5);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 12px;
 }
 
 
@@ -13218,16 +13228,74 @@ button[aria-expanded="true"] .arrow-icon {
   width: 100%;
   outline: 0.1px solid #ffffff3a;
   cursor: pointer;
-  
+  display: block;
 }
+@media (max-width: 768px) { 
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+.flex-con {
+    display: flex;
+    gap: .45rem ;
+}
+
+.flex2 {
+  display: flex;
+  gap:1rem;
+}
+
+
+
+.seth2 {
+  font-size: 15px; 
+  font-weight: 600;
+  margin: 3px 0;
+}
+
+@media (max-width: 768px) { 
+  .seth2 {
+    font-size: 15px; 
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) { 
+  .seth2 {
+    font-size: 8px; 
+    margin: 5px 0; 
+  }
+}
+
+
 .product .discount {
   background-color: #ef4444;
   color: #fff;
   padding: 5px 10px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 13px;
   display: inline-block;
 }
+
+@media (max-width: 768px) { 
+  .product .discount {
+    font-size: 10px; 
+    padding: 4px 8px; 
+    border-radius: 6px; 
+  }
+}
+
+@media (max-width: 480px) { 
+  .product .discount {
+    font-size: 8px; 
+    padding: 3px 4px; 
+    border-radius: 4px; 
+  }
+}
+
 
 .product:hover {
   background-color: rgba(34, 45, 86, 0.48);
@@ -13244,7 +13312,6 @@ button[aria-expanded="true"] .arrow-icon {
   }
 }
 
-/* Untuk layar mobile (max-width: 480px) */
 @media (max-width: 480px) {
   .product h2 {
       font-size: 14px;
@@ -13255,7 +13322,24 @@ button[aria-expanded="true"] .arrow-icon {
   display: flex;
   align-items: center;
   margin: 10px 0;
+  font-size: 13px;
 }
+
+@media (max-width: 768px) { 
+  .product .status {
+    font-size: 12px; 
+    margin: 8px 0; 
+  }
+}
+
+@media (max-width: 480px) { 
+  .product .status {
+    font-size: 8px; 
+    margin: 5px 0; 
+  }
+}
+
+
 .product .status i {
   margin-right: 5px;
 }
@@ -13267,7 +13351,22 @@ button[aria-expanded="true"] .arrow-icon {
 }
 .product .price {
   margin-top: 10px;
+  font-size: 15px;
+  gap: 0.5rem;
 }
+
+@media (max-width: 768px) { 
+  .product .price {
+    font-size: 12px; 
+  }
+}
+
+@media (max-width: 480px) { 
+  .product .price {
+    font-size: 8px;
+  }
+}
+
 .product .price .old-price {
   text-decoration: line-through;
   color: #6b7280;
@@ -13368,6 +13467,13 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
+
+@media (max-width: 768px) { 
+  .card {
+      gap:1rem;
+  }
+}
+
 .card h3 {
  font-size: 18px;
  font-weight: normal;

@@ -171,11 +171,13 @@
                 <input class="input" type="text" placeholder="Cari varian produk"/>
             </div>
             
-              <div class="row mx-7">
+              <div class="mx-7 flex-con">
                   <div class="col-md-4">
                     <div class="product p-3 shadow-sm" style="border-radius: 12px;" onclick="showBuyOptions(this)">
-                          <div class="discount">70%</div>
-                          <h2>Zoom Pro 14 Hari </h2>
+                      <div class="flex2">
+                      <div class="discount">70%</div>
+                          <h6 class="seth2">Zoom Pro 14 Hari </h6>
+                        </div>
                           <div class="status available d-flex align-items-center">
                               <i class="fas fa-check-circle"></i>
                               <span>Tersedia</span>
@@ -188,9 +190,12 @@
                   </div>
                   <div class="col-md-4">
                     <div class="product p-3 shadow-sm" style="border-radius: 12px;" onclick="showBuyOptions(this)">
-                          <div class="discount">40%</div>
-                          <h2>Zoom Pro 7 Hari</h2>
+                      <div class="flex2">    
+                      <div class="discount">40%</div>
+                          <h6 class="seth2">Zoom Pro 7 Hari</h6>
+                      </div>
                           <div class="status available d-flex align-items-center">
+                          
                               <i class="fas fa-check-circle"></i>
                               <span>Tersedia</span>
                           </div>
@@ -198,12 +203,14 @@
                               <span class="old-price">Rp. 10.000</span>
                               <span class="new-price">Rp. 5.800</span>
                           </div>
-                      </div>
+                        </div>
                   </div>
                   <div class="col-md-4">
                     <div class="product p-3 shadow-sm" style="border-radius: 12px;">
+                      <div class="flex2">  
                         <div class="discount">0%</div>
-                          <h2>Zoom 1 Bulan</h2>
+                          <h6 class="seth2">Zoom 1 Bulan</h6>
+                          </div>
                           <div class="status unavailable d-flex align-items-center">
                               <i class="fas fa-times-circle"></i>
                               <span>Stok habis</span>
@@ -411,7 +418,7 @@
 <!-- JS -->
 <script>
 function showBuyOptions(productElement) {
-    const productName = productElement.querySelector('h2').innerText;
+    const productName = productElement.querySelector('h6').innerText;
     const productPrice = productElement.querySelector('.new-price').innerText;
     const sidebar = document.getElementById('sidebar');
     sidebar.innerHTML = `
