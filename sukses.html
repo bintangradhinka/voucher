@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Voucher</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <meta name="theme-style-mode" content="1" />
+    <!-- 0 == light, 1 == dark -->
+
+    <!-- CSS 
+    ============================================ -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/vendor/slick.css" />
+    <link rel="stylesheet" href="assets/css/vendor/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/vendor/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/plugins/feature.css" />
+    <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/odometer.css" />
+    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+</html>
+
+<body class="template-color-1 nft-body-connect">
+  <header class="rn-header haeder-default header--sticky">
+    <div class="container p-5">
+      <div class="header-inner">
+        <div class="header-left">
+          <div class="logo-thumbnail logo-custom-css">
+            <a class="logo-light" href="index.html"
+              ><img src="assets/images/logo/logo-white.png" alt="logo"
+            /></a>
+            <a class="logo-dark" href="index.html"><img src="assets/images/logo/logo-dark.png" alt="logo" /></a>
+          </div>
+          <div class="mainmenu-wrapper">
+            <nav id="sideNav" class="mainmenu-nav d-none d-xl-block"></nav>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="setting-option d-none d-lg-block">
+            <form class="search-form-wrapper" action="#">
+              <input
+                type="search"
+                placeholder="Search Here"
+                aria-label="Search"
+              />
+              <div class="search-icon">
+                <button><i class="feather-search"></i></button>
+              </div>
+            </form>
+          </div>
+          <div class="setting-option rn-icon-list d-block d-lg-none">
+            <div class="icon-box search-mobile-icon">
+              <button><i class="feather-search"></i></button>
+            </div>
+            <form
+              id="header-search-1"
+              action="#"
+              method="GET"
+              class="large-mobile-blog-search"
+            >
+              <div class="rn-search-mobile form-group">
+                <button type="submit" class="search-button">
+                  <i class="feather-search"></i>
+                </button>
+                <input type="text" placeholder="Search ..." />
+              </div>
+            </form>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div
+                class="setting-option header-btn rbt-site-header"
+                id="rbt-site-header"
+              >
+                <div class="icon-box">
+                  <a
+                    id="connectbtn"
+                    class="btn btn-primary-alta btn-small"
+                    href="Login.html"
+                    >Masuk</a
+                  >
+                </div>
+              </div>
+            </div>
+              <div class="col-6">
+                <div id="my_switcher" class="my_switcher setting-option">
+                  <ul>
+                    <li>
+                      <a
+                        href="javascript: void(0);"
+                        data-theme="light"
+                        class="setColor light"
+                      >
+                        <img
+                          class="sun-image"
+                          src="assets/images/icons/sun-01.svg"
+                          alt="Sun images"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript: void(0);"
+                        data-theme="dark"
+                        class="setColor dark"
+                      >
+                        <img
+                          class="Victor Image"
+                          src="assets/images/icons/vector.svg"
+                          alt="Vector Images"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    </header>
+    <!-- Main content with product details -->
+    <div class="container mt-5">
+      <div class="col-lg-12">
+        <div class="alertu" role="alert">
+          <span>Waktu Tersisa: 29 menit dari sekarang <br> Mohon untuk lakukan pembayaran sebelum, 19 Februari 2025 - 13:53</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card col-12">
+          <h3 class="teks-lg font-semibold mb-2">Faktur Pembelian</h3>
+          <div class="grup-masukan">
+            <div class="flex input-container">
+              <input type="text" id="copyInput" value="NURON1939886226AZIP" readonly>
+              <button class="salin" id="copyButton">
+                <i class="fas fa-copy"></i>
+              </button>
+              <!-- Pesan "dicopy", disembunyikan secara default -->
+              <span id="copyMessage" style="display: none; margin-left: 10px; color: rgb(206, 183, 6);">Disalin</span>
+            </div>
+            
+            <button class="tombol-unduh">
+                <i class="fas fa-download mr-2"></i> Download
+            </button>
+        </div>
+   
+        <div class="card col-12">
+
+          <div class="rincian collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#detailPembayaran" aria-expanded="false" aria-controls="detailPembayaran">
+            <h2 class="mb-2">Detail Pembayaran</h2>
+            <i class="fas fa-chevron-up arrow-icon"></i>
+          </div>
+        
+          <div class="collapse show mt-3" id="detailPembayaran">
+            <div class="rincian">
+              <span>Tanggal</span>
+              <span>18 Februari 2025 - 20:00</span>
+            </div>
+            <div class="rincian">
+              <span>Status</span>
+              <span class="teks-col">UNPAID</span>
+            </div>
+            <div class="rincian">
+              <span>Total Harga</span>
+              <span>Rp 48.000</span>
+            </div>
+            <div class="rincian">
+              <span>Total Pajak</span>
+              <span>1.440</span>
+            </div>
+            <div class="rincian">
+              <span>Total Bayar</span>
+              <span>Rp 49.440</span>
+            </div>
+            <div class="rincian">
+              <span>Metode Pembayaran</span>
+              <span>DANA</span>
+            </div>
+          </div>
+        </div>
+</div>        
+     
+<div class="rn-footer-one rn-section-gapBottom bg-color--1 mt--100 mt_md--80 mt_sm--80">
+    
+  <div class="container footer-bot mt-5">
+      <div class="row gx-5">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="widget-content-wrapper">
+                  <div class="footer-left">
+                      <div class="logo-thumbnail logo-custom-css">
+                          <a class="logo-light" href="index.html"><img src="assets/images/logo/logo-white.png" alt="nft-logo"></a>
+                          <a class="logo-dark" href="index.html"><img src="assets/images/logo/logo-dark.png" alt="nft-logo"></a>
+                      </div>
+                      <p class="rn-footer-describe">
+                        Platform digital yang menyediakan beragam produk berkualitas dengan harga yang terjangkau. Sistem pembayaran yang mudah dan aman memudahkan Anda berbelanja. Pengiriman yang cepat dan dapat diandalkan menjamin barang sampai tepat waktu.
+                      </p>
+                  </div>
+            
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6 mt_mobile--40">
+              <div class="footer-widget widget-quicklink">
+                  <h6 class="widget-title">Voucher</h6>
+                  <ul class="footer-list-one">
+                      <li class="single-list"><a href="#">Protocol Explore</a></li>
+                      <li class="single-list"><a href="#">System Token</a></li>
+                      <li class="single-list"><a href="#">Otimize Time</a></li>
+                      <li class="single-list"><a href="#">Visual Checking</a></li>
+                      <li class="single-list"><a href="#">Fadeup System</a></li>
+                      <li class="single-list"><a href="#">Activity Log</a></li>
+                      <li class="single-list"><a href="#">System Auto Since</a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6 mt_md--40 mt_sm--40">
+              <div class="footer-widget widget-information">
+                  <h6 class="widget-title">Information</h6>
+                  <ul class="footer-list-one">
+                      <li class="single-list"><a href="#">Market Explore</a></li>
+                      <li class="single-list"><a href="#">Ready Token</a></li>
+                      <li class="single-list"><a href="#">Main Option</a></li>
+                      <li class="single-list"><a href="#">Product Checking</a></li>
+                      <li class="single-list"><a href="blog.html">Blog Grid</a></li>
+                      <li class="single-list"><a href="about.html">About Us</a></li>
+                      <li class="single-list"><a href="#">Fix Bug </a></li>
+                  </ul>
+              </div>
+          </div>
+
+    
+      </div>
+  </div>
+  </div>
+<!-- End Footer Area -->
+<!-- Start Footer Area -->
+<div class="copy-right-one ptb--20 bg-color--1">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="copyright-left">
+                  <span>©2025 Voucher, Inc. All rights reserved.</span>
+                  <ul class="privacy">
+                      <li><a href="terms-condition.html">Terms</a></li>
+                      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="copyright-right">
+                  <ul class="social-copyright">
+                      <li><a href="#"><i data-feather="facebook"></i></a></li>
+                      <li><a href="#"><i data-feather="twitter"></i></a></li>
+                      <li><a href="#"><i data-feather="instagram"></i></a></li>
+                      <li><a href="#"><i data-feather="linkedin"></i></a></li>
+                      <li><a href="#"><i data-feather="mail"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Start Top To Bottom Area  -->
+<div class="rn-progress-parent">
+<svg
+  class="rn-back-circle svg-inner"
+  width="100%"
+  height="100%"
+  viewBox="-1 -1 102 102"
+>
+  <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+</svg>
+</div>
+
+<!-- JS -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".rincian");
+    const arrowIcon = toggleButton.querySelector(".arrow-icon");
+
+    toggleButton.addEventListener("click", function () {
+        setTimeout(() => {
+            if (toggleButton.classList.contains("collapsed")) {
+                arrowIcon.style.transform = "rotate(-180deg)";
+            } else {
+                arrowIcon.style.transform = "rotate(0deg)";
+            }
+        }, 100);
+    });
+});
+
+document.getElementById('copyButton').addEventListener('click', function() {
+  const copyText = document.getElementById('copyInput').value;
+  
+  // Menyalin teks ke clipboard
+  navigator.clipboard.writeText(copyText)
+    .then(() => {
+      const message = document.getElementById('copyMessage');
+      message.style.display = 'inline';
+      // Sembunyikan pesan setelah 2 detik
+      setTimeout(() => {
+        message.style.display = 'none';
+      }, 2000);
+    })
+    .catch(err => {
+      console.error('Gagal menyalin teks: ', err);
+    });
+});
+
+</script>
+
+
+
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/vendor/jquery.js"></script>
+<script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+<script src="assets/js/vendor/jquery-ui.js"></script>
+<script src="assets/js/vendor/modernizer.min.js"></script>
+<script src="assets/js/vendor/feather.min.js"></script>
+<script src="assets/js/vendor/slick.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/vendor/sal.min.js"></script>
+<script src="assets/js/vendor/particles.js"></script>
+<script src="assets/js/vendor/jquery.style.swicher.js"></script>
+<script src="assets/js/vendor/js.cookie.js"></script>
+<script src="assets/js/vendor/count-down.js"></script>
+<script src="assets/js/vendor/isotop.js"></script>
+<script src="assets/js/vendor/imageloaded.js"></script>
+<script src="assets/js/vendor/backtoTop.js"></script>
+<script src="assets/js/vendor/odometer.js"></script>
+<script src="assets/js/vendor/jquery-appear.js"></script>
+<script src="assets/js/vendor/scrolltrigger.js"></script>
+<script src="assets/js/vendor/jquery.custom-file-input.js"></script>
+<script src="assets/js/vendor/savePopup.js"></script>
+<script src="assets/js/vendor/vanilla.tilt.js"></script>
+
+<!-- main JS -->
+<script src="assets/js/main.js"></script>
+<!-- Meta Mask  -->
+<script src="assets/js/vendor/web3.min.js"></script>
+<script src="assets/js/vendor/maralis.js"></script>
+<script src="assets/js/vendor/nft.js"></script>
+<script type="text/javascript">
+$('.customer-logos').slick({
+    slidesToShow: 6, 
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    arrows: false,
+    dots: false,
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 576, 
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 400, 
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]
+});
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+</body>
+</html>
