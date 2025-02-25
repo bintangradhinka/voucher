@@ -139,11 +139,14 @@
           <h3 class="teks-lg font-semibold mb-2">Faktur Pembelian</h3>
           <div class="grup-masukan">
             <div class="flex input-container">
-                <input type="text" value="NURON1939886226AZIP" readonly>
-                <button class="salin">
-                    <i class="fas fa-copy"></i>
-                </button>
+              <input type="text" id="copyInput" value="NURON1939886226AZIP" readonly>
+              <button class="salin" id="copyButton">
+                <i class="fas fa-copy"></i>
+              </button>
+              <!-- Pesan "dicopy", disembunyikan secara default -->
+              <span id="copyMessage" style="display: none; margin-left: 10px; color: rgb(206, 183, 6);">Disalin</span>
             </div>
+            
             <button class="tombol-unduh">
                 <i class="fas fa-download mr-2"></i> Download
             </button>
@@ -184,98 +187,12 @@
           </div>
         </div>
 </div>        
-     
-<div class="rn-callto-action rn-section-gapTop">
-<div class="container-fluid about-fluidimg-cta">
-  <div class="row">
-    <div class="col-lg-12 ">
-      <div class="d-flex justify-content-center" style="margin-bottom: 2rem;">
-        <div class="row " style="width: 90%;">
-          <div class="col-lg-12">
-            <div style="border-radius: 20px;" class="call-to-action-wrapper single-odometer banner">
-
-              <div class="row">
-                <div class="col-12 col-md-6 text-start">
-                  <h2
-                  data-sal="slide-up"
-                  data-sal-duration="800"
-                  data-sal-delay="150"
-                >
-                Nikmati Berbagai Kemudahan Dengan Mendaftar
-                </h2>
-                <p class="text-start p-0"
-                  data-sal="slide-up"
-                  data-sal-duration="800"
-                  data-sal-delay="150"
-                >
-                Bebas biaya admin, lebih mudah kelola transaksi dan pesanan, bebas mengatur jumlah juga menyimpannya ke keranjang. Tunggu apa lagi?
-                </p>
-
-                <div
-                  class="callto-action-btn-wrapper justify-content-start"
-                  data-sal="slide-up"
-                  data-sal-duration="800"
-                  data-sal-delay="150"
-                >
-                  <a style="font-size: 20px;" href="create.html" class="btn btn-primary-alta btn-large"
-                    >Daftar Sekarang</a
-                  >
-                </div>
-                
-                </div>
-                <div class="col-12 col-md-6 justify-content-center">
-                  <img class="cta-image" src="https://boboku.store/images/cartoon.webp" alt="">
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
-<!-- Start Footer Area -->
-<div class="rn-footer-one rn-section-gapBottom bg-color--1 mt--100 mt_md--80 mt_sm--80">
-  <div class="footer-top">
-    
-      <div class="container">
-        <div class="row">
-        <!-- <section class="customer-logos slider"> -->
-          <ul class="nu-brand-area customer-logos slider">
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/jiGZMKp2RD1583433506.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/qQYo61sIDa1702995837.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-          </ul>
-
      
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-       
-          <ul class="nu-brand-area customer-logos slider">
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-           <li> <div class="slide"><img src="https://assets.tripay.co.id/upload/payment-icon/tEclz5Assb1643375216.png"></div></li>
-          </ul>
-
+<div class="rn-footer-one rn-section-gapBottom bg-color--1 mt--100 mt_md--80 mt_sm--80">
     
-        </div>
-      </div>
-  </div>
-  <div class="container">
+  <div class="container footer-bot mt-5">
       <div class="row gx-5">
           <div class="col-lg-4 col-md-6 col-sm-6 col-12">
               <div class="widget-content-wrapper">
@@ -292,7 +209,7 @@
               </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt_mobile--40">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6 mt_mobile--40">
               <div class="footer-widget widget-quicklink">
                   <h6 class="widget-title">Voucher</h6>
                   <ul class="footer-list-one">
@@ -307,7 +224,7 @@
               </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6 mt_md--40 mt_sm--40">
               <div class="footer-widget widget-information">
                   <h6 class="widget-title">Information</h6>
                   <ul class="footer-list-one">
@@ -325,7 +242,7 @@
     
       </div>
   </div>
-</div>
+  </div>
 <!-- End Footer Area -->
 <!-- Start Footer Area -->
 <div class="copy-right-one ptb--20 bg-color--1">
@@ -385,6 +302,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.getElementById('copyButton').addEventListener('click', function() {
+  const copyText = document.getElementById('copyInput').value;
+  
+  // Menyalin teks ke clipboard
+  navigator.clipboard.writeText(copyText)
+    .then(() => {
+      const message = document.getElementById('copyMessage');
+      message.style.display = 'inline';
+      // Sembunyikan pesan setelah 2 detik
+      setTimeout(() => {
+        message.style.display = 'none';
+      }, 2000);
+    })
+    .catch(err => {
+      console.error('Gagal menyalin teks: ', err);
+    });
+});
 
 </script>
 

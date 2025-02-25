@@ -608,7 +608,7 @@ ol ul {
 }
 @media only screen and (max-width: 767px) {
   .rn-section-gapTop {
-    padding-top: 80px;
+    padding-top: 20px;
   }
 }
 
@@ -6589,7 +6589,6 @@ select:active,
 textarea:focus,
 textarea:active {
   outline: none;
-  border-color: var(--color-primary);
 }
 
 button,
@@ -8138,7 +8137,7 @@ nav.pagination-wrapper {
 }
 nav.pagination-wrapper .pagination {
   margin-top: 60px;
-  margin-bottom: 0;
+  margin-bottom: 50px;
   transition: var(--transition);
   background: var(--background-color-1);
   border: 1px solid var(--color-border);
@@ -11824,6 +11823,7 @@ body.sal-disabled [data-sal|="flip"] {
   transform: none;
 }
 
+
 /* Header  */
 /*------------------------
     Header Sticky 
@@ -12869,12 +12869,11 @@ span.rn-badge-card::before {
   outline: 0.1px solid #ffffff3a; 
   border-radius: 8px; 
   background-color: var(--background-color-1); 
-  padding: 20px;
+  padding: 40px;
   margin-top: 10px;
 }
 
 .cash {
-  border: 1px solid white;
   border-radius: 8px;
   padding: 10px;
   display: flex;
@@ -12885,11 +12884,32 @@ span.rn-badge-card::before {
 }
 
 .cash2 {
-  border: 0.1px solid white;
+  border: 0.1px solid;
   border-radius: 8px;
   padding: 1px;
   display: flex;
   align-items: center;
+  width: 30%;
+}
+
+@media (max-width: 768px) {
+  .cash2 {
+    width: 75%; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .cash2 {
+    width: 90%; 
+    justify-content: space-around;
+   
+  }
+}
+
+
+.cash2.selected {
+  border: 2px solid rgb(6, 98, 156); 
 }
 
 .harga {
@@ -12924,6 +12944,60 @@ span.rn-badge-card::before {
   color: #ffffff;
   font-size: 15px;
 }
+
+@media only screen and (max-width: 969px) {
+  /* Sidebar yang muncul dari bawah */
+  #sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #010b18;
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+@media only screen and (max-width: 768px) {
+  /* Sidebar yang muncul dari bawah */
+  #sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #010b18;
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  #sidebar.active {
+    transform: translateY(0);
+  }
+  /* Overlay */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.048);
+    z-index: 900;
+    display: none;
+  }
+  #overlay.active {
+    display: block;
+  }
+}
+}
+
+
+
+
 /*------------------------------
    Arrow Icon
 --------------------------------*/
@@ -13013,7 +13087,7 @@ button[aria-expanded="true"] .arrow-icon {
 }
 
 .salin {
-  background: var(--color-gray);
+  background: #fff;
   display: flex;
   font-weight: 500;
   text-align: center;
@@ -13025,13 +13099,13 @@ button[aria-expanded="true"] .arrow-icon {
   transition: var(--transition);
   letter-spacing: 0.5px;
   width: auto;
-  border: 0 none;
+  border: 1px solid ;
   box-shadow: none;
 }
 .tombol-unduh {
   width: auto;
   height: 3.1em;
-  background-color: white;
+  background-color: #fff;
   color: #2d3748;
   padding-right: 20px;
   padding-top: 8px;
@@ -13043,6 +13117,7 @@ button[aria-expanded="true"] .arrow-icon {
   display: flex;
   gap: 0.5rem;
   border: none;
+  border: 1px solid;
 }
 .rincian {
   display: flex;
@@ -13057,6 +13132,28 @@ button[aria-expanded="true"] .arrow-icon {
   border-radius: 8px;
   padding: 0.5rem;
   font-size: 12px;
+}
+
+
+/*------------------------------
+   JS CSS
+--------------------------------*/
+.subjs {
+  font-size: 16px;
+  color: #fff;
+}
+
+.hargajs{
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.emailjs {
+  font-size: 15.5px; 
+  margin-top: 20px; 
+  color: #fff;
+  font-weight: 500;
 }
 
 
@@ -13233,14 +13330,18 @@ button[aria-expanded="true"] .arrow-icon {
 @media (max-width: 480px) { 
   .product {
     display: flex;
-    flex-wrap: wrap;
+            flex-wrap: wrap;
+            flex-direction: column;
   }
 }
 
 
 .flex-con {
-    display: flex;
-    gap: .45rem ;
+  display: flex
+;
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .flex2 {
@@ -13264,21 +13365,25 @@ button[aria-expanded="true"] .arrow-icon {
 
 
 .seth2 {
-  font-size: 15px; 
+  font-size: 17px; 
   font-weight: 600;
   margin: 3px 0;
+  text-align: center;
+
 }
 
 @media (max-width: 768px) { 
   .seth2 {
     font-size: 15px; 
     margin: 5px 0;
+    text-align: left;
   }
 }
 
 @media (max-width: 480px) { 
   .seth2 {
-    font-size: 8px; 
+    text-align: left;
+    font-size: 12px; 
     margin: 5px 0; 
   }
 }
@@ -13289,9 +13394,15 @@ button[aria-expanded="true"] .arrow-icon {
   color: #fff;
   padding: 5px 10px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 11px;
   display: inline-block;
+  align-items: center;
 }
+
+.discount sup {
+  font-size: 70%; /* 60% dari ukuran angka */
+}
+
 
 @media (max-width: 768px) { 
   .product .discount {
@@ -13347,7 +13458,7 @@ button[aria-expanded="true"] .arrow-icon {
 
 @media (max-width: 480px) { 
   .product .status {
-    font-size: 8px; 
+    font-size: 12px; 
     margin: 5px 0; 
   }
 }
@@ -13368,6 +13479,7 @@ button[aria-expanded="true"] .arrow-icon {
   gap: 0.5rem;
 }
 
+
 @media (max-width: 768px) { 
   .product .price {
     font-size: 12px; 
@@ -13376,7 +13488,10 @@ button[aria-expanded="true"] .arrow-icon {
 
 @media (max-width: 480px) { 
   .product .price {
-    font-size: 8px;
+    font-size: 10px;
+  }
+  .varian{
+    width: 185px;
   }
 }
 
@@ -13672,14 +13787,18 @@ main {
 }
 .payment-methods .icons {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 20px;
+    align-items: center;
+    padding: 0px 15px;
 }
 @media only screen and (max-width: 991px) {
   .payment-methods .icons {
       gap: 15px;
       justify-content: center; 
       flex-direction: column;
+      align-items: center;
   }
 }
 
@@ -13694,6 +13813,7 @@ main {
 @media only screen and (max-width: 480px) {
   .payment-methods .icons {
       gap: 5px;
+      align-items: center;
   }
 }
 
@@ -16014,6 +16134,7 @@ figcaption {
   line-height: 12px;
   width: 10px;
   height: 10px;
+  display: none;
 }
 
 .slick-dots .animated-dot {
@@ -19121,6 +19242,15 @@ button .small-image {
   margin-top: 20px;
   padding: 0 30px 0 0;
 }
+
+.footer-bot{
+  background-color: #0e1218;
+  padding-top: 50px !important;
+  padding-right: 50px !important;
+  padding-left: 50px !important;
+  padding-bottom: 50px !important;
+  border-radius: 18px;
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rn-footer-one .footer-left .rn-footer-describe {
     padding: 0;
@@ -22216,6 +22346,13 @@ body.modal-open {
   .grid-metro5 .grid-metro-item {
     width: 33.33%;
   }
+  .cta-text{
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .cta-text-desk{
+    font-size: 16px !important;
+  }
 }
 
 /* Styling resizer agar tetap responsif */
@@ -22405,6 +22542,7 @@ button.slide-arrow:hover.slide-arrow i {
 .slick-dots {
   position: relative;
   margin-top: -5px;
+  display: none !important;
 }
 .slick-dots li.slick-active {
   background: transparent;
@@ -22487,6 +22625,8 @@ body.count_bg--3 .countdown .countdown-container .countdown-value {
 body.count_bg--4 .countdown .countdown-container .countdown-value {
   background-color: var(--color-primary);
 }
+
+
 
 /*------------------------------
  Comming Soon Styles  
@@ -25067,7 +25207,12 @@ body.active-light-mode {
 .active-light-mode .rbt-single-widget.widget_recent_entries .inner a,
 .active-light-mode .upcoming-projects tr th span,
 .active-light-mode .change-pass-wrapper input,
-.active-light-mode .accordion .accordion-item .accordion-header button i {
+.active-light-mode .accordion .accordion-item .accordion-header button i,
+.active-light-mode .subjs, 
+.active-light-mode .hargajs, 
+.active-light-mode .emailjs, 
+.active-light-mode .name, 
+.active-light-mode .price {
   color: var(--color-light-heading);
 }
 .active-light-mode
@@ -25221,16 +25366,18 @@ body.active-light-mode {
 .active-light-mode .consuk,
 .active-light-mode .card,
 .active-light-mode .cash,
-.active-light-mode .cash2,
+.active-light-mode .footer-bot,
 .active-light-mode .product-tab-nav .nav {
   background: var(--color-white);
 }
 .active-light-mode .slick-dots li button,
 .active-light-mode .left-header-style,
 .active-light-mode .accordion .accordion-item .accordion-body,
-.active-light-mode .newsletter-wrapper {
+.active-light-mode .newsletter-wrapper,
+.active-light-mode .cash2 {
   background: var(--color-white);
 }
+
 .active-light-mode
   .rn-collection-inner-one
   .collection-wrapper
@@ -25238,7 +25385,7 @@ body.active-light-mode {
   span.items,
 .active-light-mode .form-wrapper-one.form-create .nice-select.open .list,
 .active-light-mode .collection-single-wized .create-collection-input input {
-  background: var(--color-gray-2);
+  background: var(-);
 }
 .active-light-mode
   .rn-icon-list.user-account
@@ -25719,7 +25866,6 @@ body.active-light-mode {
 }
 .active-light-mode .product-tab-nav .nav button.nav-link {
   border-color: var(--color-white);
-  background: var(--color-primary);
 }
 
 .active-light-mode .rn-header.sticky {
