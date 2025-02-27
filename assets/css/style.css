@@ -12862,13 +12862,15 @@ span.rn-badge-card::before {
   animation: customOne 1.2s infinite;
 }
 
+
+
 /*------------------------------
   JsDetail
 --------------------------------*/
 .jsdetail {
   outline: 0.1px solid #ffffff3a; 
   border-radius: 8px; 
-  background-color: var(--background-color-1); 
+  background-color: #0e1218; 
   padding: 40px;
   margin-top: 10px;
 }
@@ -12953,7 +12955,6 @@ span.rn-badge-card::before {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #010b18;
     color: #fff;
     transform: translateY(100%);
     transition: transform 0.3s ease;
@@ -12968,7 +12969,6 @@ span.rn-badge-card::before {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #010b18;
     color: #fff;
     transform: translateY(100%);
     transition: transform 0.3s ease;
@@ -13278,6 +13278,26 @@ button[aria-expanded="true"] .arrow-icon {
 
 @media (max-width: 480px) {
   .alertu {
+    font-size: 90%;
+  }
+}
+.alerty {
+  background-color: rgba(34, 45, 86, 0.268);
+  color: rgb(58, 130, 255);
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid rgb(57, 119, 226);
+  font-size: 100%;
+}
+@media (max-width: 768px) {
+  .alerty { 
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .alerty {
     font-size: 90%;
   }
 }
@@ -13760,10 +13780,32 @@ main {
   }
 }
 
-/* Mobile (≤576px) */
+
 @media (max-width: 576px) {
   .icon-cost {
       width: 43px;
+  }
+}
+
+.icon-wal{
+    width: 55px;
+    margin-right: 10px;
+    background-color: white;
+    padding: 10px 6px 10px 6px;
+    border-radius: 8px;
+    border: 0.1px solid #C2C6CC;
+}
+
+@media (max-width: 768px) {
+  .icon-wal {
+      width: 55px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .icon-wal {
+      width: 50px;
   }
 }
 
@@ -19848,7 +19890,7 @@ button .small-image {
 }
 @media only screen and (max-width: 991px) {
   .product-style-one a .product-name {
-    font-size: 21px;
+    font-size: 13px;
   }
 }
 
@@ -19877,14 +19919,14 @@ button .small-image {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .product-style-one .latest-bid {
-      font-size: 15px;
+      font-size: 12px;
   }
 }
 
 /* Smartphone landscape (576px - 767px) */
 @media only screen and (max-width: 767px) {
   .product-style-one .latest-bid {
-      font-size: 14px;
+      font-size: 11px;
   }
 }
 
@@ -20137,6 +20179,7 @@ button .small-image {
     min-width: 85px;
   }
 }
+
 .isotop-filter button.is-checked,
 .isotop-filter button:hover,
 .isotop-filter button:focus {
@@ -20144,8 +20187,27 @@ button .small-image {
   border-color: var(--color-primary-alta) !important;
 }
 
+.isotop-filter button.is-checked .filter-text, 
+.isotop-filter button:hover .filter-text, 
+.isotop-filter button:focus .filter-text {
+    color: rgb(255, 255, 255) !important;
+}
+
+
+.bege {
+  background-color: var(--background-color-1);
+  padding-top: 10px;
+  margin-top: 100px;
+}
+
+.pik {
+    height: 45px;
+
+}
+
 .filter-text {
   font-size: 100%;
+  color: #fff;
 }
 
 @media only screen and (max-width: 768px) {
@@ -22313,35 +22375,34 @@ body.modal-open {
   flex-wrap: wrap;
 }
 
-/* Default: 5 item per baris */
+
 .grid-metro5 .grid-metro-item {
   width: 20%;
   padding: 0 15px;
   margin-top: 30px;
 }
 
-/* 5 item per baris untuk ukuran layar 992px ke atas */
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .grid-metro5 .grid-metro-item {
     width: 20%;
   }
 }
 
-/* 4 item per baris untuk ukuran layar 768px - 991px */
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .grid-metro5 .grid-metro-item {
     width: 25%;
   }
 }
 
-/* 4 item per baris untuk ukuran layar <= 767px */
+
 @media only screen and (max-width: 767px) {
   .grid-metro5 .grid-metro-item {
     width: 25%;
   }
 }
 
-/* 3 item per baris tetap untuk layar <= 575px */
 @media only screen and (max-width: 575px) {
   .grid-metro5 .grid-metro-item {
     width: 33.33%;
@@ -25366,7 +25427,6 @@ body.active-light-mode {
 .active-light-mode .consuk,
 .active-light-mode .card,
 .active-light-mode .cash,
-.active-light-mode .footer-bot,
 .active-light-mode .product-tab-nav .nav {
   background: var(--color-white);
 }
@@ -25374,8 +25434,69 @@ body.active-light-mode {
 .active-light-mode .left-header-style,
 .active-light-mode .accordion .accordion-item .accordion-body,
 .active-light-mode .newsletter-wrapper,
-.active-light-mode .cash2 {
+.active-light-mode .cash2,
+.active-light-mode .bege {
   background: var(--color-white);
+}
+
+.active-light-mode .footer-bot {
+
+  background: #F1F4F6;
+}
+
+.active-light-mode .filter-text {
+
+  color: #374151;
+}
+
+.active-light-mode .filter-text {
+
+  color: #374151;
+}
+
+.active-light-mode a.btn.btn-primary-alta {
+
+  background-color: #252525;
+  color: #ffffff;
+}
+
+.active-light-mode .isotop-filter button.is-checked,
+.active-light-mode .isotop-filter button:hover,
+.active-light-mode .isotop-filter button:focus {
+
+  background: var(--color-primary) !important; 
+  border-color: #ffffff !important; 
+  color: #374151;
+}
+
+.active-light-mode a.btn.btn-primary,
+.active-light-mode button.btn.btn-primary,
+.active-light-mode nav.pagination-wrapper .pagination li a.active,
+.active-light-mode .voucher button 
+{
+  background: #c1c1c5 !important; 
+  border-color: #ffffff !important; 
+  color: #374151;
+}
+
+.active-light-mode .icona,
+.active-light-mode .icon {
+
+  background-color: rgb(250, 250, 250);
+}
+
+
+.active-light-mode .alertu {
+
+  background-color: rgba(255, 255, 255, 0.69);
+  color: rgb(86, 86, 86);
+  border-left: 4px solid rgb(138, 138, 138);
+}
+.active-light-mode .alerty {
+
+  background-color: rgba(240, 240, 240, 0.69);
+  color: rgb(86, 86, 86);
+  border-left: 4px solid rgb(138, 138, 138);
 }
 
 .active-light-mode
@@ -25866,6 +25987,7 @@ body.active-light-mode {
 }
 .active-light-mode .product-tab-nav .nav button.nav-link {
   border-color: var(--color-white);
+  background:#e9eced;
 }
 
 .active-light-mode .rn-header.sticky {
@@ -25967,14 +26089,12 @@ body.active-light-mode {
   border: 15px solid var(--color-white);
 }
 .active-light-mode nav.pagination-wrapper .pagination li a {
-  background: var(--color-gray-2);
+  background: #F1F4F6;
   color: var(--color-dark);
 }
-.active-light-mode nav.pagination-wrapper .pagination li a.active {
-  background: var(--color-primary);
-}
+
 .active-light-mode nav.pagination-wrapper .pagination li a:hover {
-  background: var(--color-primary);
+  background: #c1c1c5;
 }
 .active-light-mode .form-wrapper-one {
   background: var(--color-white);

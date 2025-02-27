@@ -83,14 +83,9 @@
               <div
                 class="setting-option header-btn rbt-site-header"
                 id="rbt-site-header"
-              >
+>
                 <div class="icon-box">
-                  <a
-                    id="connectbtn"
-                    class="btn btn-primary-alta btn-small"
-                    href="Login.html"
-                    >Masuk</a
-                  >
+                  <a id="connectbtn"class="btn btn-primary-alta btn-small"href="Login.html">Masuk</a>
                 </div>
               </div>
             </div>
@@ -190,6 +185,7 @@
                         </div>
                       </div>
                   </div>
+
                   <div class="col-6 col-lg-3 varian">
                     <div class="product p-3 shadow-sm" style="border-radius: 12px;" onclick="showBuyOptions(this)">
                       <div class="flex2">    
@@ -208,6 +204,7 @@
                       </div>
                     </div>
                   </div>
+      
                   <div class="col-6  col-lg-3 varian">
                     <div class="product p-3 shadow-sm" style="border-radius: 12px;">
                       <div class="flex2">  
@@ -240,7 +237,8 @@
   </div>
 
   <div class="rn-footer-one rn-section-gapBottom bg-color--1 mt--100 mt_md--80 mt_sm--80">
-    
+   
+    <div class="bege">
     <div class="container footer-bot mt-5">
         <div class="row gx-5">
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
@@ -287,7 +285,7 @@
                     </ul>
                 </div>
             </div>
-
+          </div>
       
         </div>
     </div>
@@ -334,6 +332,18 @@
 </div>
 
 <!-- JS -->
+ <script>
+document.querySelectorAll('.varian .unavailable').forEach(el => {
+  let varian = el.closest('.varian');
+  varian.style.pointerEvents = 'none'; // Nonaktifkan klik
+  varian.style.opacity = '0.6'; // Buat tampilan lebih redup
+  varian.style.cursor = 'not-allowed'; // Ubah cursor jadi "tidak bisa diklik"
+});
+</script>
+
+
+
+
 <script>
 function showBuyOptions(e, productElement) {
   if (arguments.length < 2) {
